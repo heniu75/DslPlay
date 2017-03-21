@@ -1,11 +1,12 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{194a908c-2e60-4416-89fd-c14fa992d682}</ProjectGuid>
+    <ProjectGuid>{194A908C-2E60-4416-89FD-C14FA992D682}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Debugging</RootNamespace>
@@ -56,9 +57,9 @@
     <None Include="Sample.report.diagram">
       <DependentUpon>Sample.report</DependentUpon>
     </None>
-    <None Include="Test.report" />
-    <None Include="Test.report.diagram">
-      <DependentUpon>Test.report</DependentUpon>
+    <None Include="Test1.report" />
+    <None Include="Test1.report.diagram">
+      <DependentUpon>Test1.report</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

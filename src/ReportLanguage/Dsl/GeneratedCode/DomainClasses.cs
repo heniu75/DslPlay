@@ -12,20 +12,20 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace Company.ReportLanguage
 {
 	/// <summary>
-	/// DomainClass ExampleModel
+	/// DomainClass ReportModel
 	/// The root in which all other elements are embedded. Appears as a diagram.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.ReportLanguage.ExampleModel.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.ReportLanguage.ExampleModel.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportModel.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.ReportLanguage.ReportModel.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.ReportLanguage.ReportLanguageDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("7b7308ec-a51e-44c4-b56e-2ff4c7a963fe")]
-	public partial class ExampleModel : DslModeling::ModelElement
+	public partial class ReportModel : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ExampleModel domain class Id.
+		/// ReportModel domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x7b7308ec, 0xa51e, 0x44c4, 0xb5, 0x6e, 0x2f, 0xf4, 0xc7, 0xa9, 0x63, 0xfe);
 		/// <summary>
@@ -33,7 +33,7 @@ namespace Company.ReportLanguage
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ExampleModel(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ReportModel(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -43,22 +43,124 @@ namespace Company.ReportLanguage
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ExampleModel(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ReportModel(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
+		#endregion
+		#region NameOfProject domain property code
+		
+		/// <summary>
+		/// NameOfProject domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameOfProjectDomainPropertyId = new global::System.Guid(0x67d2b042, 0x5e6d, 0x4a33, 0x8a, 0x24, 0x41, 0xf0, 0x99, 0xb5, 0x5b, 0xda);
+		
+		/// <summary>
+		/// Storage for NameOfProject
+		/// </summary>
+		private global::System.String nameOfProjectPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of NameOfProject domain property.
+		/// Description for Company.ReportLanguage.ReportModel.Name Of Project
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportModel/NameOfProject.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.ReportModel/NameOfProject.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("67d2b042-5e6d-4a33-8a24-41f099b55bda")]
+		public global::System.String NameOfProject
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nameOfProjectPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NameOfProjectPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ReportModel.NameOfProject domain property.
+		/// </summary>
+		internal sealed partial class NameOfProjectPropertyHandler : DslModeling::DomainPropertyValueHandler<ReportModel, global::System.String>
+		{
+			private NameOfProjectPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ReportModel.NameOfProject domain property value handler.
+			/// </summary>
+			public static readonly NameOfProjectPropertyHandler Instance = new NameOfProjectPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ReportModel.NameOfProject domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameOfProjectDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ReportModel element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nameOfProjectPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ReportModel element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nameOfProjectPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
 		#endregion
 		#region Elements opposite domain role accessor
 		
 		/// <summary>
 		/// Gets a list of Elements.
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ExampleElement> Elements
+		public virtual DslModeling::LinkedElementCollection<Report> Elements
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ExampleElement>, ExampleElement>(global::Company.ReportLanguage.ExampleModelHasElements.ExampleModelDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Report>, Report>(global::Company.ReportLanguage.ReportModelHasElements.ReportModelDomainRoleId);
+			}
+		}
+		#endregion
+		#region Generators opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Generators.
+		/// Description for Company.ReportLanguage.ReportModelHasGenerators.ReportModel
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Generator> Generators
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Generator>, Generator>(global::Company.ReportLanguage.ReportModelHasGenerators.ReportModelDomainRoleId);
 			}
 		}
 		#endregion
@@ -82,7 +184,12 @@ namespace Company.ReportLanguage
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Company.ReportLanguage.ExampleElement.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Company.ReportLanguage.Report.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::Company.ReportLanguage.Generator.DomainClassId)) 
 				{
 					return true;
 				}
@@ -111,11 +218,20 @@ namespace Company.ReportLanguage
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Company.ReportLanguage.ExampleElement sourceExampleElement1 = sourceElement as global::Company.ReportLanguage.ExampleElement;
-			if (sourceExampleElement1 != null)
+			global::Company.ReportLanguage.Report sourceReport1 = sourceElement as global::Company.ReportLanguage.Report;
+			if (sourceReport1 != null)
 			{
-				// Create link for path ExampleModelHasElements.Elements
-				this.Elements.Add(sourceExampleElement1);
+				// Create link for path ReportModelHasElements.Elements
+				this.Elements.Add(sourceReport1);
+
+				return;
+			}
+				
+			global::Company.ReportLanguage.Generator sourceGenerator2 = sourceElement as global::Company.ReportLanguage.Generator;
+			if (sourceGenerator2 != null)
+			{
+				// Create link for path ReportModelHasGenerators.Generators
+				this.Generators.Add(sourceGenerator2);
 
 				return;
 			}
@@ -142,15 +258,29 @@ namespace Company.ReportLanguage
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Company.ReportLanguage.ExampleElement sourceExampleElement1 = sourceElement as global::Company.ReportLanguage.ExampleElement;
-			if (sourceExampleElement1 != null)
+			global::Company.ReportLanguage.Report sourceReport1 = sourceElement as global::Company.ReportLanguage.Report;
+			if (sourceReport1 != null)
 			{
-				// Delete link for path ExampleModelHasElements.Elements
+				// Delete link for path ReportModelHasElements.Elements
 				
-				foreach (DslModeling::ElementLink link in global::Company.ReportLanguage.ExampleModelHasElements.GetLinks((global::Company.ReportLanguage.ExampleModel)this, sourceExampleElement1))
+				foreach (DslModeling::ElementLink link in global::Company.ReportLanguage.ReportModelHasElements.GetLinks((global::Company.ReportLanguage.ReportModel)this, sourceReport1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Company.ReportLanguage.ExampleModelHasElements.ExampleModelDomainRoleId, global::Company.ReportLanguage.ExampleModelHasElements.ElementDomainRoleId);
+					link.Delete(global::Company.ReportLanguage.ReportModelHasElements.ReportModelDomainRoleId, global::Company.ReportLanguage.ReportModelHasElements.ElementDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::Company.ReportLanguage.Generator sourceGenerator2 = sourceElement as global::Company.ReportLanguage.Generator;
+			if (sourceGenerator2 != null)
+			{
+				// Delete link for path ReportModelHasGenerators.Generators
+				
+				foreach (DslModeling::ElementLink link in global::Company.ReportLanguage.ReportModelHasGenerators.GetLinks((global::Company.ReportLanguage.ReportModel)this, sourceGenerator2))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::Company.ReportLanguage.ReportModelHasGenerators.ReportModelDomainRoleId, global::Company.ReportLanguage.ReportModelHasGenerators.GeneratorDomainRoleId);
 				}
 
 				return;
@@ -164,21 +294,21 @@ namespace Company.ReportLanguage
 namespace Company.ReportLanguage
 {
 	/// <summary>
-	/// DomainClass ExampleElement
+	/// DomainClass Report
 	/// Elements embedded in the model. Appear as boxes on the diagram.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.ReportLanguage.ExampleElement.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.ReportLanguage.ExampleElement.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.ReportLanguage.Report.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.ReportLanguage.Report.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.ReportLanguage.ReportLanguageDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
 	[DslModeling::DomainObjectId("7a0b26f8-59b0-4c2d-870d-abac40e0edd8")]
-	public partial class ExampleElement : DslModeling::ModelElement
+	public partial class Report : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ExampleElement domain class Id.
+		/// Report domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x7a0b26f8, 0x59b0, 0x4c2d, 0x87, 0x0d, 0xab, 0xac, 0x40, 0xe0, 0xed, 0xd8);
 		/// <summary>
@@ -186,7 +316,7 @@ namespace Company.ReportLanguage
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ExampleElement(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Report(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -196,7 +326,7 @@ namespace Company.ReportLanguage
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ExampleElement(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Report(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -215,10 +345,10 @@ namespace Company.ReportLanguage
 		
 		/// <summary>
 		/// Gets or sets the value of Name domain property.
-		/// Description for Company.ReportLanguage.ExampleElement.Name
+		/// Description for Company.ReportLanguage.Report.Name
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.ReportLanguage.ExampleElement/Name.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.ReportLanguage.ExampleElement/Name.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.Report/Name.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.Report/Name.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
 		[global::System.ComponentModel.DefaultValue("")]
 		[DslModeling::ElementName]
 		[DslModeling::DomainObjectId("289a1818-e2e0-499a-8d0d-ea5f86584ee8")]
@@ -236,19 +366,19 @@ namespace Company.ReportLanguage
 			}
 		}
 		/// <summary>
-		/// Value handler for the ExampleElement.Name domain property.
+		/// Value handler for the Report.Name domain property.
 		/// </summary>
-		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<ExampleElement, global::System.String>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<Report, global::System.String>
 		{
 			private NamePropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the ExampleElement.Name domain property value handler.
+			/// Gets the singleton instance of the Report.Name domain property value handler.
 			/// </summary>
 			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the ExampleElement.Name domain property.
+			/// Gets the Id of the Report.Name domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
@@ -264,7 +394,7 @@ namespace Company.ReportLanguage
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ExampleElement element)
+			public override sealed global::System.String GetValue(Report element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.namePropertyStorage;
@@ -275,7 +405,7 @@ namespace Company.ReportLanguage
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ExampleElement element, global::System.String newValue)
+			public override sealed void SetValue(Report element, global::System.String newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
@@ -290,21 +420,195 @@ namespace Company.ReportLanguage
 		}
 		
 		#endregion
-		#region ExampleModel opposite domain role accessor
+		#region SpecificationURL domain property code
+		
 		/// <summary>
-		/// Gets or sets ExampleModel.
+		/// SpecificationURL domain property Id.
 		/// </summary>
-		public virtual ExampleModel ExampleModel
+		public static readonly global::System.Guid SpecificationURLDomainPropertyId = new global::System.Guid(0x61b35599, 0xce49, 0x42f3, 0xa2, 0xb3, 0x3f, 0x1d, 0xf2, 0xd8, 0x98, 0x6e);
+		
+		/// <summary>
+		/// Storage for SpecificationURL
+		/// </summary>
+		private global::System.String specificationURLPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of SpecificationURL domain property.
+		/// Description for Company.ReportLanguage.Report.Specification URL
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.Report/SpecificationURL.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.Report/SpecificationURL.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("61b35599-ce49-42f3-a2b3-3f1df2d8986e")]
+		public global::System.String SpecificationURL
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.ReportLanguage.ExampleModelHasElements.ElementDomainRoleId) as ExampleModel;
+				return specificationURLPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.ReportLanguage.ExampleModelHasElements.ElementDomainRoleId, value);
+				SpecificationURLPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Report.SpecificationURL domain property.
+		/// </summary>
+		internal sealed partial class SpecificationURLPropertyHandler : DslModeling::DomainPropertyValueHandler<Report, global::System.String>
+		{
+			private SpecificationURLPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Report.SpecificationURL domain property value handler.
+			/// </summary>
+			public static readonly SpecificationURLPropertyHandler Instance = new SpecificationURLPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Report.SpecificationURL domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return SpecificationURLDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Report element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.specificationURLPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Report element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.specificationURLPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Author domain property code
+		
+		/// <summary>
+		/// Author domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid AuthorDomainPropertyId = new global::System.Guid(0xc7a42086, 0xbcf1, 0x4413, 0xa0, 0x14, 0x4b, 0x46, 0xbf, 0x07, 0x18, 0xf7);
+		
+		/// <summary>
+		/// Storage for Author
+		/// </summary>
+		private global::System.String authorPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Author domain property.
+		/// Description for Company.ReportLanguage.Report.Author
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.Report/Author.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.Report/Author.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("c7a42086-bcf1-4413-a014-4b46bf0718f7")]
+		public global::System.String Author
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return authorPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				AuthorPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Report.Author domain property.
+		/// </summary>
+		internal sealed partial class AuthorPropertyHandler : DslModeling::DomainPropertyValueHandler<Report, global::System.String>
+		{
+			private AuthorPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Report.Author domain property value handler.
+			/// </summary>
+			public static readonly AuthorPropertyHandler Instance = new AuthorPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Report.Author domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return AuthorDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Report element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.authorPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Report element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.authorPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ReportModel opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ReportModel.
+		/// </summary>
+		public virtual ReportModel ReportModel
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.ReportLanguage.ReportModelHasElements.ElementDomainRoleId) as ReportModel;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.ReportLanguage.ReportModelHasElements.ElementDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -314,12 +618,12 @@ namespace Company.ReportLanguage
 		/// Gets a list of Targets.
 		/// Description for Company.ReportLanguage.ExampleRelationship.Target
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ExampleElement> Targets
+		public virtual DslModeling::LinkedElementCollection<Report> Targets
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ExampleElement>, ExampleElement>(global::Company.ReportLanguage.ExampleElementReferencesTargets.SourceDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Report>, Report>(global::Company.ReportLanguage.ReportReferencesReports.SourceDomainRoleId);
 			}
 		}
 		#endregion
@@ -329,12 +633,450 @@ namespace Company.ReportLanguage
 		/// Gets a list of Sources.
 		/// Description for Company.ReportLanguage.ExampleRelationship.Source
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ExampleElement> Sources
+		public virtual DslModeling::LinkedElementCollection<Report> Sources
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ExampleElement>, ExampleElement>(global::Company.ReportLanguage.ExampleElementReferencesTargets.TargetDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Report>, Report>(global::Company.ReportLanguage.ReportReferencesReports.TargetDomainRoleId);
+			}
+		}
+		#endregion
+		#region Generators opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Generators.
+		/// Description for Company.ReportLanguage.ReportReferencesGenerators.Report
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Generator> Generators
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Generator>, Generator>(global::Company.ReportLanguage.ReportReferencesGenerators.ReportDomainRoleId);
+			}
+		}
+		#endregion
+	}
+}
+namespace Company.ReportLanguage
+{
+	/// <summary>
+	/// DomainClass Generator
+	/// Description for Company.ReportLanguage.Generator
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.ReportLanguage.Generator.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.ReportLanguage.Generator.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.ReportLanguage.ReportLanguageDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("3c7bb38f-5b90-4828-a235-196867f21764")]
+	public partial class Generator : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Generator domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x3c7bb38f, 0x5b90, 0x4828, 0xa2, 0x35, 0x19, 0x68, 0x67, 0xf2, 0x17, 0x64);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Generator(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Generator(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0xc3b0f8a0, 0x7ddb, 0x490e, 0xaa, 0xd2, 0x26, 0x25, 0xbf, 0xcc, 0x13, 0xcf);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Description for Company.ReportLanguage.Generator.Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.Generator/Name.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.Generator/Name.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("c3b0f8a0-7ddb-490e-aad2-2625bfcc13cf")]
+		public global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Generator.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<Generator, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Generator.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Generator.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Generator element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.namePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Generator element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region AssemblyName domain property code
+		
+		/// <summary>
+		/// AssemblyName domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid AssemblyNameDomainPropertyId = new global::System.Guid(0xa1627a2f, 0xeaf2, 0x4594, 0x82, 0x8f, 0x74, 0x41, 0xa3, 0x98, 0xab, 0x41);
+		
+		/// <summary>
+		/// Storage for AssemblyName
+		/// </summary>
+		private global::System.String assemblyNamePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of AssemblyName domain property.
+		/// Description for Company.ReportLanguage.Generator.Assembly Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.Generator/AssemblyName.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.Generator/AssemblyName.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("a1627a2f-eaf2-4594-828f-7441a398ab41")]
+		public global::System.String AssemblyName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return assemblyNamePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				AssemblyNamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Generator.AssemblyName domain property.
+		/// </summary>
+		internal sealed partial class AssemblyNamePropertyHandler : DslModeling::DomainPropertyValueHandler<Generator, global::System.String>
+		{
+			private AssemblyNamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Generator.AssemblyName domain property value handler.
+			/// </summary>
+			public static readonly AssemblyNamePropertyHandler Instance = new AssemblyNamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Generator.AssemblyName domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return AssemblyNameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Generator element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.assemblyNamePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Generator element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.assemblyNamePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region AssemblyLocation domain property code
+		
+		/// <summary>
+		/// AssemblyLocation domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid AssemblyLocationDomainPropertyId = new global::System.Guid(0x652d9ccf, 0x3082, 0x4da0, 0x80, 0x99, 0xd3, 0xd7, 0x94, 0xac, 0xb8, 0x96);
+		
+		/// <summary>
+		/// Storage for AssemblyLocation
+		/// </summary>
+		private global::System.String assemblyLocationPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of AssemblyLocation domain property.
+		/// Description for Company.ReportLanguage.Generator.Assembly Location
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.Generator/AssemblyLocation.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.Generator/AssemblyLocation.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("652d9ccf-3082-4da0-8099-d3d794acb896")]
+		public global::System.String AssemblyLocation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return assemblyLocationPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				AssemblyLocationPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Generator.AssemblyLocation domain property.
+		/// </summary>
+		internal sealed partial class AssemblyLocationPropertyHandler : DslModeling::DomainPropertyValueHandler<Generator, global::System.String>
+		{
+			private AssemblyLocationPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Generator.AssemblyLocation domain property value handler.
+			/// </summary>
+			public static readonly AssemblyLocationPropertyHandler Instance = new AssemblyLocationPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Generator.AssemblyLocation domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return AssemblyLocationDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Generator element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.assemblyLocationPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Generator element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.assemblyLocationPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ClassName domain property code
+		
+		/// <summary>
+		/// ClassName domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ClassNameDomainPropertyId = new global::System.Guid(0xb9319e73, 0xadf1, 0x439e, 0xbd, 0xe3, 0x91, 0xc3, 0xd7, 0x33, 0xa2, 0xf7);
+		
+		/// <summary>
+		/// Storage for ClassName
+		/// </summary>
+		private global::System.String classNamePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of ClassName domain property.
+		/// Description for Company.ReportLanguage.Generator.Class Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.Generator/ClassName.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.Generator/ClassName.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("b9319e73-adf1-439e-bde3-91c3d733a2f7")]
+		public global::System.String ClassName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return classNamePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ClassNamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Generator.ClassName domain property.
+		/// </summary>
+		internal sealed partial class ClassNamePropertyHandler : DslModeling::DomainPropertyValueHandler<Generator, global::System.String>
+		{
+			private ClassNamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Generator.ClassName domain property value handler.
+			/// </summary>
+			public static readonly ClassNamePropertyHandler Instance = new ClassNamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Generator.ClassName domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ClassNameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Generator element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.classNamePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Generator element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.classNamePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ReportModel opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ReportModel.
+		/// Description for Company.ReportLanguage.ReportModelHasGenerators.Generator
+		/// </summary>
+		public virtual ReportModel ReportModel
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.ReportLanguage.ReportModelHasGenerators.GeneratorDomainRoleId) as ReportModel;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.ReportLanguage.ReportModelHasGenerators.GeneratorDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Reported opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Reported.
+		/// Description for Company.ReportLanguage.ReportReferencesGenerators.Generator
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Report> Reported
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Report>, Report>(global::Company.ReportLanguage.ReportReferencesGenerators.GeneratorDomainRoleId);
 			}
 		}
 		#endregion

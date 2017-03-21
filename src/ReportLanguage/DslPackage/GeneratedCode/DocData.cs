@@ -305,7 +305,7 @@ namespace Company.ReportLanguage
 		protected override void Load(string fileName, bool isReload)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::Company.ReportLanguage.ExampleModel modelRoot = null;
+			global::Company.ReportLanguage.ReportModel modelRoot = null;
 			DslModeling::ISchemaResolver schemaResolver = new DslShell::ModelingSchemaResolver(this.ServiceProvider);
 			//clear the current root element
 			this.SetRootElement(null);
@@ -410,7 +410,7 @@ namespace Company.ReportLanguage
 		protected override void Save(string fileName)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::Company.ReportLanguage.ExampleModel modelRoot = (global::Company.ReportLanguage.ExampleModel)this.RootElement;
+			global::Company.ReportLanguage.ReportModel modelRoot = (global::Company.ReportLanguage.ReportModel)this.RootElement;
 
 			
 			// Only save the diagrams if
@@ -556,7 +556,7 @@ namespace Company.ReportLanguage
 		{
 			get
 			{
-				global::Company.ReportLanguage.ExampleModel modelRoot = this.RootElement as global::Company.ReportLanguage.ExampleModel;
+				global::Company.ReportLanguage.ReportModel modelRoot = this.RootElement as global::Company.ReportLanguage.ReportModel;
 				string modelFile = string.Empty;
 				if (modelRoot != null)
 				{

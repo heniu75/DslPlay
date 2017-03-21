@@ -125,113 +125,281 @@
     <value>ReportLanguage</value>
     <comment>DisplayName for DslLibrary &apos;ReportLanguage&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleModel.Description" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportModel.Description" xml:space="preserve">
     <value>The root in which all other elements are embedded. Appears as a diagram.</value>
-    <comment>Description for DomainClass &apos;ExampleModel&apos;</comment>
+    <comment>Description for DomainClass &apos;ReportModel&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleModel.DisplayName" xml:space="preserve">
-    <value>Example Model</value>
-    <comment>DisplayName for DomainClass &apos;ExampleModel&apos;</comment>
+  <data name="Company.ReportLanguage.ReportModel.DisplayName" xml:space="preserve">
+    <value>Report Model</value>
+    <comment>DisplayName for DomainClass &apos;ReportModel&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleElement.Description" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportModel/NameOfProject.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.ReportModel.Name Of Project</value>
+    <comment>Description for DomainProperty &apos;NameOfProject&apos; on DomainClass &apos;ReportModel&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportModel/NameOfProject.DisplayName" xml:space="preserve">
+    <value>Name Of Project</value>
+    <comment>DisplayName for DomainProperty &apos;NameOfProject&apos; on DomainClass &apos;ReportModel&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Report.Description" xml:space="preserve">
     <value>Elements embedded in the model. Appear as boxes on the diagram.</value>
-    <comment>Description for DomainClass &apos;ExampleElement&apos;</comment>
+    <comment>Description for DomainClass &apos;Report&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleElement.DisplayName" xml:space="preserve">
-    <value>Example Element</value>
-    <comment>DisplayName for DomainClass &apos;ExampleElement&apos;</comment>
+  <data name="Company.ReportLanguage.Report.DisplayName" xml:space="preserve">
+    <value>Report</value>
+    <comment>DisplayName for DomainClass &apos;Report&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleElement/Name.Description" xml:space="preserve">
-    <value>Description for Company.ReportLanguage.ExampleElement.Name</value>
-    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ExampleElement&apos;</comment>
+  <data name="Company.ReportLanguage.Report/Name.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.Report.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Report&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleElement/Name.DisplayName" xml:space="preserve">
+  <data name="Company.ReportLanguage.Report/Name.DisplayName" xml:space="preserve">
     <value>Name</value>
-    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ExampleElement&apos;</comment>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Report&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleModelHasElements.Description" xml:space="preserve">
+  <data name="Company.ReportLanguage.Report/SpecificationURL.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.Report.Specification URL</value>
+    <comment>Description for DomainProperty &apos;SpecificationURL&apos; on DomainClass &apos;Report&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Report/SpecificationURL.DisplayName" xml:space="preserve">
+    <value>Specification URL</value>
+    <comment>DisplayName for DomainProperty &apos;SpecificationURL&apos; on DomainClass &apos;Report&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Report/Author.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.Report.Author</value>
+    <comment>Description for DomainProperty &apos;Author&apos; on DomainClass &apos;Report&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Report/Author.DisplayName" xml:space="preserve">
+    <value>Author</value>
+    <comment>DisplayName for DomainProperty &apos;Author&apos; on DomainClass &apos;Report&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Generator.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.Generator</value>
+    <comment>Description for DomainClass &apos;Generator&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Generator.DisplayName" xml:space="preserve">
+    <value>Generator</value>
+    <comment>DisplayName for DomainClass &apos;Generator&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Generator/Name.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.Generator.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Generator&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Generator/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Generator&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Generator/AssemblyName.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.Generator.Assembly Name</value>
+    <comment>Description for DomainProperty &apos;AssemblyName&apos; on DomainClass &apos;Generator&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Generator/AssemblyName.DisplayName" xml:space="preserve">
+    <value>Assembly Name</value>
+    <comment>DisplayName for DomainProperty &apos;AssemblyName&apos; on DomainClass &apos;Generator&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Generator/AssemblyLocation.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.Generator.Assembly Location</value>
+    <comment>Description for DomainProperty &apos;AssemblyLocation&apos; on DomainClass &apos;Generator&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Generator/AssemblyLocation.DisplayName" xml:space="preserve">
+    <value>Assembly Location</value>
+    <comment>DisplayName for DomainProperty &apos;AssemblyLocation&apos; on DomainClass &apos;Generator&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Generator/ClassName.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.Generator.Class Name</value>
+    <comment>Description for DomainProperty &apos;ClassName&apos; on DomainClass &apos;Generator&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.Generator/ClassName.DisplayName" xml:space="preserve">
+    <value>Class Name</value>
+    <comment>DisplayName for DomainProperty &apos;ClassName&apos; on DomainClass &apos;Generator&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportModelHasElements.Description" xml:space="preserve">
     <value>Embedding relationship between the Model and Elements</value>
-    <comment>Description for DomainClass &apos;ExampleModelHasElements&apos;</comment>
+    <comment>Description for DomainClass &apos;ReportModelHasElements&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleModelHasElements.DisplayName" xml:space="preserve">
-    <value>Example Model Has Elements</value>
-    <comment>DisplayName for DomainClass &apos;ExampleModelHasElements&apos;</comment>
+  <data name="Company.ReportLanguage.ReportModelHasElements.DisplayName" xml:space="preserve">
+    <value>Report Model Has Elements</value>
+    <comment>DisplayName for DomainClass &apos;ReportModelHasElements&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleModelHasElements/ExampleModel.Description" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportModelHasElements/ReportModel.Description" xml:space="preserve">
     <value></value>
-    <comment>Description for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+    <comment>Description for DomainRole &apos;ReportModel&apos; on DomainRelationship &apos;ReportModelHasElements&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleModelHasElements/ExampleModel.DisplayName" xml:space="preserve">
-    <value>Example Model</value>
-    <comment>DisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  <data name="Company.ReportLanguage.ReportModelHasElements/ReportModel.DisplayName" xml:space="preserve">
+    <value>Report Model</value>
+    <comment>DisplayName for DomainRole &apos;ReportModel&apos; on DomainRelationship &apos;ReportModelHasElements&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleModelHasElements/ExampleModel.PropertyDisplayName" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportModelHasElements/ReportModel.PropertyDisplayName" xml:space="preserve">
     <value>Elements</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;ReportModel&apos; on DomainRelationship &apos;ReportModelHasElements&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleModelHasElements/Element.Description" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportModelHasElements/Element.Description" xml:space="preserve">
     <value></value>
-    <comment>Description for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+    <comment>Description for DomainRole &apos;Element&apos; on DomainRelationship &apos;ReportModelHasElements&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleModelHasElements/Element.DisplayName" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportModelHasElements/Element.DisplayName" xml:space="preserve">
     <value>Element</value>
-    <comment>DisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ReportModelHasElements&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleModelHasElements/Element.PropertyDisplayName" xml:space="preserve">
-    <value>Example Model</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  <data name="Company.ReportLanguage.ReportModelHasElements/Element.PropertyDisplayName" xml:space="preserve">
+    <value>Report Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ReportModelHasElements&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleElementReferencesTargets.Description" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportReferencesReports.Description" xml:space="preserve">
     <value>Reference relationship between Elements.</value>
-    <comment>Description for DomainClass &apos;ExampleElementReferencesTargets&apos;</comment>
+    <comment>Description for DomainClass &apos;ReportReferencesReports&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleElementReferencesTargets.DisplayName" xml:space="preserve">
-    <value>Example Element References Targets</value>
-    <comment>DisplayName for DomainClass &apos;ExampleElementReferencesTargets&apos;</comment>
+  <data name="Company.ReportLanguage.ReportReferencesReports.DisplayName" xml:space="preserve">
+    <value>Report References Reports</value>
+    <comment>DisplayName for DomainClass &apos;ReportReferencesReports&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleElementReferencesTargets/Source.Description" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportReferencesReports/Source.Description" xml:space="preserve">
     <value>Description for Company.ReportLanguage.ExampleRelationship.Target</value>
-    <comment>Description for DomainRole &apos;Source&apos; on DomainRelationship &apos;ExampleElementReferencesTargets&apos;</comment>
+    <comment>Description for DomainRole &apos;Source&apos; on DomainRelationship &apos;ReportReferencesReports&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleElementReferencesTargets/Source.DisplayName" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportReferencesReports/Source.DisplayName" xml:space="preserve">
     <value>Source</value>
-    <comment>DisplayName for DomainRole &apos;Source&apos; on DomainRelationship &apos;ExampleElementReferencesTargets&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Source&apos; on DomainRelationship &apos;ReportReferencesReports&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleElementReferencesTargets/Source.PropertyDisplayName" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportReferencesReports/Source.PropertyDisplayName" xml:space="preserve">
     <value>Targets</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Source&apos; on DomainRelationship &apos;ExampleElementReferencesTargets&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;Source&apos; on DomainRelationship &apos;ReportReferencesReports&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleElementReferencesTargets/Target.Description" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportReferencesReports/Target.Description" xml:space="preserve">
     <value>Description for Company.ReportLanguage.ExampleRelationship.Source</value>
-    <comment>Description for DomainRole &apos;Target&apos; on DomainRelationship &apos;ExampleElementReferencesTargets&apos;</comment>
+    <comment>Description for DomainRole &apos;Target&apos; on DomainRelationship &apos;ReportReferencesReports&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleElementReferencesTargets/Target.DisplayName" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportReferencesReports/Target.DisplayName" xml:space="preserve">
     <value>Target</value>
-    <comment>DisplayName for DomainRole &apos;Target&apos; on DomainRelationship &apos;ExampleElementReferencesTargets&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Target&apos; on DomainRelationship &apos;ReportReferencesReports&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleElementReferencesTargets/Target.PropertyDisplayName" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportReferencesReports/Target.PropertyDisplayName" xml:space="preserve">
     <value>Sources</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Target&apos; on DomainRelationship &apos;ExampleElementReferencesTargets&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;Target&apos; on DomainRelationship &apos;ReportReferencesReports&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleShape.Description" xml:space="preserve">
+  <data name="Company.ReportLanguage.ReportModelHasGenerators.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.ReportModelHasGenerators</value>
+    <comment>Description for DomainClass &apos;ReportModelHasGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportModelHasGenerators.DisplayName" xml:space="preserve">
+    <value>Report Model Has Generators</value>
+    <comment>DisplayName for DomainClass &apos;ReportModelHasGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportModelHasGenerators/ReportModel.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.ReportModelHasGenerators.ReportModel</value>
+    <comment>Description for DomainRole &apos;ReportModel&apos; on DomainRelationship &apos;ReportModelHasGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportModelHasGenerators/ReportModel.DisplayName" xml:space="preserve">
+    <value>Report Model</value>
+    <comment>DisplayName for DomainRole &apos;ReportModel&apos; on DomainRelationship &apos;ReportModelHasGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportModelHasGenerators/ReportModel.PropertyDisplayName" xml:space="preserve">
+    <value>Generators</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ReportModel&apos; on DomainRelationship &apos;ReportModelHasGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportModelHasGenerators/Generator.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.ReportModelHasGenerators.Generator</value>
+    <comment>Description for DomainRole &apos;Generator&apos; on DomainRelationship &apos;ReportModelHasGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportModelHasGenerators/Generator.DisplayName" xml:space="preserve">
+    <value>Generator</value>
+    <comment>DisplayName for DomainRole &apos;Generator&apos; on DomainRelationship &apos;ReportModelHasGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportModelHasGenerators/Generator.PropertyDisplayName" xml:space="preserve">
+    <value>Report Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Generator&apos; on DomainRelationship &apos;ReportModelHasGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportReferencesGenerators.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.ReportReferencesGenerators</value>
+    <comment>Description for DomainClass &apos;ReportReferencesGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportReferencesGenerators.DisplayName" xml:space="preserve">
+    <value>Report References Generators</value>
+    <comment>DisplayName for DomainClass &apos;ReportReferencesGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportReferencesGenerators/Report.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.ReportReferencesGenerators.Report</value>
+    <comment>Description for DomainRole &apos;Report&apos; on DomainRelationship &apos;ReportReferencesGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportReferencesGenerators/Report.DisplayName" xml:space="preserve">
+    <value>Report</value>
+    <comment>DisplayName for DomainRole &apos;Report&apos; on DomainRelationship &apos;ReportReferencesGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportReferencesGenerators/Report.PropertyDisplayName" xml:space="preserve">
+    <value>Generators</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Report&apos; on DomainRelationship &apos;ReportReferencesGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportReferencesGenerators/Generator.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.ReportReferencesGenerators.Generator</value>
+    <comment>Description for DomainRole &apos;Generator&apos; on DomainRelationship &apos;ReportReferencesGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportReferencesGenerators/Generator.DisplayName" xml:space="preserve">
+    <value>Generator</value>
+    <comment>DisplayName for DomainRole &apos;Generator&apos; on DomainRelationship &apos;ReportReferencesGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportReferencesGenerators/Generator.PropertyDisplayName" xml:space="preserve">
+    <value>Reported</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Generator&apos; on DomainRelationship &apos;ReportReferencesGenerators&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportShape.Description" xml:space="preserve">
     <value>Shape used to represent ExampleElements on a Diagram.</value>
-    <comment>Description for DomainClass &apos;ExampleShape&apos;</comment>
+    <comment>Description for DomainClass &apos;ReportShape&apos;</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleShape.DisplayName" xml:space="preserve">
-    <value>Example Shape</value>
-    <comment>DisplayName for DomainClass &apos;ExampleShape&apos;</comment>
+  <data name="Company.ReportLanguage.ReportShape.DisplayName" xml:space="preserve">
+    <value>Report Shape</value>
+    <comment>DisplayName for DomainClass &apos;ReportShape&apos;</comment>
   </data>
-  <data name="ExampleShapeNameDecoratorDefaultText" xml:space="preserve">
+  <data name="ReportShapeNameDecoratorDefaultText" xml:space="preserve">
     <value>NameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleConnector.Description" xml:space="preserve">
-    <value>Connector between the ExampleShapes. Represents ExampleRelationships on the Diagram.</value>
-    <comment>Description for DomainClass &apos;ExampleConnector&apos;</comment>
+  <data name="ReportShapeSpecificationURLDecoratorDefaultText" xml:space="preserve">
+    <value>SpecificationURLDecorator</value>
+    <comment>Text decorator default text</comment>
   </data>
-  <data name="Company.ReportLanguage.ExampleConnector.DisplayName" xml:space="preserve">
-    <value>Example Connector</value>
-    <comment>DisplayName for DomainClass &apos;ExampleConnector&apos;</comment>
+  <data name="ReportShapeAuthorDecoratorDefaultText" xml:space="preserve">
+    <value>AuthorDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.ReportLanguage.GeneratorShape.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.GeneratorShape</value>
+    <comment>Description for DomainClass &apos;GeneratorShape&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.GeneratorShape.DisplayName" xml:space="preserve">
+    <value>Generator Shape</value>
+    <comment>DisplayName for DomainClass &apos;GeneratorShape&apos;</comment>
+  </data>
+  <data name="GeneratorShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="GeneratorShapeAssemblyNameDecoratorDefaultText" xml:space="preserve">
+    <value>AssemblyNameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="GeneratorShapeAssemblyLocationDecoratorDefaultText" xml:space="preserve">
+    <value>AssemblyLocationDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="GeneratorShapeClassNameDecoratorDefaultText" xml:space="preserve">
+    <value>ClassNameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportToReportConnector.Description" xml:space="preserve">
+    <value>Connector between Reports. Represents Report-References-Report relationship on the Diagram.</value>
+    <comment>Description for DomainClass &apos;ReportToReportConnector&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportToReportConnector.DisplayName" xml:space="preserve">
+    <value>Report To Report Connector</value>
+    <comment>DisplayName for DomainClass &apos;ReportToReportConnector&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportToGeneratorConnector.Description" xml:space="preserve">
+    <value>Description for Company.ReportLanguage.ReportToGeneratorConnector</value>
+    <comment>Description for DomainClass &apos;ReportToGeneratorConnector&apos;</comment>
+  </data>
+  <data name="Company.ReportLanguage.ReportToGeneratorConnector.DisplayName" xml:space="preserve">
+    <value>Report To Generator Connector</value>
+    <comment>DisplayName for DomainClass &apos;ReportToGeneratorConnector&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>ReportLanguage (*.report)|*.report</value>
@@ -249,24 +417,40 @@
     <value>Minimal Language Diagram</value>
     <comment>DisplayName for DomainClass &apos;ReportLanguageDiagram&apos;</comment>
   </data>
-  <data name="ReportLanguageToolboxTab" xml:space="preserve">
-    <value>ReportLanguage</value>
+  <data name="ReportsToolboxTab" xml:space="preserve">
+    <value>Reports</value>
     <comment>Toolbox item tab name</comment>
   </data>
-  <data name="ExampleElementToolboxItem" xml:space="preserve">
-    <value>ExampleElement</value>
+  <data name="ReportElementToolboxItem" xml:space="preserve">
+    <value>Report Element</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ExampleElementToolboxTooltip" xml:space="preserve">
-    <value>Create an ExampleElement</value>
+  <data name="ReportElementToolboxTooltip" xml:space="preserve">
+    <value>Create a Report Element</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ExampleRelationshipToolboxItem" xml:space="preserve">
-    <value>ExampleRelationship</value>
+  <data name="ReportRelationshipToolboxItem" xml:space="preserve">
+    <value>Report Relationship</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ExampleRelationshipToolboxTooltip" xml:space="preserve">
-    <value>Drag between ExampleElements to create an ExampleRelationship</value>
+  <data name="ReportRelationshipToolboxTooltip" xml:space="preserve">
+    <value>Drag between Reports</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="GeneratorElementToolboxItem" xml:space="preserve">
+    <value>Generator Element</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="GeneratorElementToolboxTooltip" xml:space="preserve">
+    <value>Create a Generator Element</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="GeneratorRelationshipToolboxItem" xml:space="preserve">
+    <value>Generator Relationship</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="GeneratorRelationshipToolboxTooltip" xml:space="preserve">
+    <value>Drag from Report to Generator</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -394,11 +578,19 @@ A DomainClass can be serialized as a moniker only if
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ExampleElementToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="ReportElementToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ExampleRelationshipToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="ReportRelationshipToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleconnectortoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="GeneratorElementToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="GeneratorRelationshipToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\resources\exampleconnectortoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>

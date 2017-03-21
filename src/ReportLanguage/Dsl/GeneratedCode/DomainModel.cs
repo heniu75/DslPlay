@@ -67,13 +67,18 @@ namespace Company.ReportLanguage
 		{
 			return new global::System.Type[]
 			{
-				typeof(ExampleModel),
-				typeof(ExampleElement),
-				typeof(ExampleModelHasElements),
-				typeof(ExampleElementReferencesTargets),
+				typeof(ReportModel),
+				typeof(Report),
+				typeof(Generator),
+				typeof(ReportModelHasElements),
+				typeof(ReportReferencesReports),
+				typeof(ReportModelHasGenerators),
+				typeof(ReportReferencesGenerators),
 				typeof(ReportLanguageDiagram),
-				typeof(ExampleConnector),
-				typeof(ExampleShape),
+				typeof(ReportToReportConnector),
+				typeof(ReportToGeneratorConnector),
+				typeof(ReportShape),
+				typeof(GeneratorShape),
 				typeof(global::Company.ReportLanguage.FixUpDiagram),
 				typeof(global::Company.ReportLanguage.ConnectorRolePlayerChanged),
 			};
@@ -87,7 +92,14 @@ namespace Company.ReportLanguage
 		{
 			return new DomainMemberInfo[]
 			{
-				new DomainMemberInfo(typeof(ExampleElement), "Name", ExampleElement.NameDomainPropertyId, typeof(ExampleElement.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(ReportModel), "NameOfProject", ReportModel.NameOfProjectDomainPropertyId, typeof(ReportModel.NameOfProjectPropertyHandler)),
+				new DomainMemberInfo(typeof(Report), "Name", Report.NameDomainPropertyId, typeof(Report.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Report), "SpecificationURL", Report.SpecificationURLDomainPropertyId, typeof(Report.SpecificationURLPropertyHandler)),
+				new DomainMemberInfo(typeof(Report), "Author", Report.AuthorDomainPropertyId, typeof(Report.AuthorPropertyHandler)),
+				new DomainMemberInfo(typeof(Generator), "Name", Generator.NameDomainPropertyId, typeof(Generator.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Generator), "AssemblyName", Generator.AssemblyNameDomainPropertyId, typeof(Generator.AssemblyNamePropertyHandler)),
+				new DomainMemberInfo(typeof(Generator), "AssemblyLocation", Generator.AssemblyLocationDomainPropertyId, typeof(Generator.AssemblyLocationPropertyHandler)),
+				new DomainMemberInfo(typeof(Generator), "ClassName", Generator.ClassNameDomainPropertyId, typeof(Generator.ClassNamePropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -98,10 +110,14 @@ namespace Company.ReportLanguage
 		{
 			return new DomainRolePlayerInfo[]
 			{
-				new DomainRolePlayerInfo(typeof(ExampleModelHasElements), "ExampleModel", ExampleModelHasElements.ExampleModelDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ExampleModelHasElements), "Element", ExampleModelHasElements.ElementDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ExampleElementReferencesTargets), "Source", ExampleElementReferencesTargets.SourceDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ExampleElementReferencesTargets), "Target", ExampleElementReferencesTargets.TargetDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ReportModelHasElements), "ReportModel", ReportModelHasElements.ReportModelDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ReportModelHasElements), "Element", ReportModelHasElements.ElementDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ReportReferencesReports), "Source", ReportReferencesReports.SourceDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ReportReferencesReports), "Target", ReportReferencesReports.TargetDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ReportModelHasGenerators), "ReportModel", ReportModelHasGenerators.ReportModelDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ReportModelHasGenerators), "Generator", ReportModelHasGenerators.GeneratorDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ReportReferencesGenerators), "Report", ReportReferencesGenerators.ReportDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ReportReferencesGenerators), "Generator", ReportReferencesGenerators.GeneratorDomainRoleId),
 			};
 		}
 		#endregion
@@ -123,12 +139,15 @@ namespace Company.ReportLanguage
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(5);
-				createElementMap.Add(typeof(ExampleModel), 0);
-				createElementMap.Add(typeof(ExampleElement), 1);
-				createElementMap.Add(typeof(ReportLanguageDiagram), 2);
-				createElementMap.Add(typeof(ExampleConnector), 3);
-				createElementMap.Add(typeof(ExampleShape), 4);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(8);
+				createElementMap.Add(typeof(ReportModel), 0);
+				createElementMap.Add(typeof(Report), 1);
+				createElementMap.Add(typeof(Generator), 2);
+				createElementMap.Add(typeof(ReportLanguageDiagram), 3);
+				createElementMap.Add(typeof(ReportToReportConnector), 4);
+				createElementMap.Add(typeof(ReportToGeneratorConnector), 5);
+				createElementMap.Add(typeof(ReportShape), 6);
+				createElementMap.Add(typeof(GeneratorShape), 7);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -142,11 +161,14 @@ namespace Company.ReportLanguage
 			}
 			switch (index)
 			{
-				case 0: return new ExampleModel(partition, propertyAssignments);
-				case 1: return new ExampleElement(partition, propertyAssignments);
-				case 2: return new ReportLanguageDiagram(partition, propertyAssignments);
-				case 3: return new ExampleConnector(partition, propertyAssignments);
-				case 4: return new ExampleShape(partition, propertyAssignments);
+				case 0: return new ReportModel(partition, propertyAssignments);
+				case 1: return new Report(partition, propertyAssignments);
+				case 2: return new Generator(partition, propertyAssignments);
+				case 3: return new ReportLanguageDiagram(partition, propertyAssignments);
+				case 4: return new ReportToReportConnector(partition, propertyAssignments);
+				case 5: return new ReportToGeneratorConnector(partition, propertyAssignments);
+				case 6: return new ReportShape(partition, propertyAssignments);
+				case 7: return new GeneratorShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -169,9 +191,11 @@ namespace Company.ReportLanguage
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(2);
-				createElementLinkMap.Add(typeof(ExampleModelHasElements), 0);
-				createElementLinkMap.Add(typeof(ExampleElementReferencesTargets), 1);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(4);
+				createElementLinkMap.Add(typeof(ReportModelHasElements), 0);
+				createElementLinkMap.Add(typeof(ReportReferencesReports), 1);
+				createElementLinkMap.Add(typeof(ReportModelHasGenerators), 2);
+				createElementLinkMap.Add(typeof(ReportReferencesGenerators), 3);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -186,8 +210,10 @@ namespace Company.ReportLanguage
 			}
 			switch (index)
 			{
-				case 0: return new ExampleModelHasElements(partition, roleAssignments, propertyAssignments);
-				case 1: return new ExampleElementReferencesTargets(partition, roleAssignments, propertyAssignments);
+				case 0: return new ReportModelHasElements(partition, roleAssignments, propertyAssignments);
+				case 1: return new ReportReferencesReports(partition, roleAssignments, propertyAssignments);
+				case 2: return new ReportModelHasGenerators(partition, roleAssignments, propertyAssignments);
+				case 3: return new ReportReferencesGenerators(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -356,7 +382,8 @@ namespace Company.ReportLanguage
 		public ReportLanguageDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::Company.ReportLanguage.ExampleModelHasElements.ElementDomainRoleId, true);
+			DomainRoles.Add(global::Company.ReportLanguage.ReportModelHasElements.ElementDomainRoleId, true);
+			DomainRoles.Add(global::Company.ReportLanguage.ReportModelHasGenerators.GeneratorDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

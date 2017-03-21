@@ -191,15 +191,26 @@ namespace Company.ReportLanguage
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::Company.ReportLanguage.ExampleElement)
+			if(element is global::Company.ReportLanguage.Report)
 			{
-				global::Company.ReportLanguage.ExampleShape newShape = new global::Company.ReportLanguage.ExampleShape(this.Partition);
+				global::Company.ReportLanguage.ReportShape newShape = new global::Company.ReportLanguage.ReportShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Company.ReportLanguage.ExampleElementReferencesTargets)
+			if(element is global::Company.ReportLanguage.Generator)
 			{
-				global::Company.ReportLanguage.ExampleConnector newShape = new global::Company.ReportLanguage.ExampleConnector(this.Partition);
+				global::Company.ReportLanguage.GeneratorShape newShape = new global::Company.ReportLanguage.GeneratorShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Company.ReportLanguage.ReportReferencesReports)
+			{
+				global::Company.ReportLanguage.ReportToReportConnector newShape = new global::Company.ReportLanguage.ReportToReportConnector(this.Partition);
+				return newShape;
+			}
+			if(element is global::Company.ReportLanguage.ReportReferencesGenerators)
+			{
+				global::Company.ReportLanguage.ReportToGeneratorConnector newShape = new global::Company.ReportLanguage.ReportToGeneratorConnector(this.Partition);
 				return newShape;
 			}
 			return base.CreateChildShape(element);
@@ -213,23 +224,57 @@ namespace Company.ReportLanguage
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			global::Company.ReportLanguage.ExampleShape.DecoratorsInitialized += ExampleShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.ReportLanguage.ReportShape.DecoratorsInitialized += ReportShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.ReportLanguage.GeneratorShape.DecoratorsInitialized += GeneratorShapeDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for ExampleShape.
+		/// Class containing decorator path traversal methods for ReportShape.
 		/// </summary>
-		internal static partial class ExampleShapeDecoratorMap
+		internal static partial class ReportShapeDecoratorMap
 		{
 			/// <summary>
-			/// Event handler called when decorator initialization is complete for ExampleShape.  Adds decorator mappings for this shape or connector.
+			/// Event handler called when decorator initialization is complete for ReportShape.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.ReportLanguage.ExampleElement.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.ReportLanguage.Report.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.ReportLanguage.Report.SpecificationURLDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "SpecificationURLDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.ReportLanguage.Report.AuthorDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "AuthorDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for GeneratorShape.
+		/// </summary>
+		internal static partial class GeneratorShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for GeneratorShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.ReportLanguage.Generator.AssemblyLocationDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "AssemblyLocationDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.ReportLanguage.Generator.AssemblyNameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "AssemblyNameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.ReportLanguage.Generator.ClassNameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ClassNameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.ReportLanguage.Generator.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -238,7 +283,8 @@ namespace Company.ReportLanguage
 		
 		#region Connect actions
 		private bool changingMouseAction;
-		private global::Company.ReportLanguage.ExampleRelationshipConnectAction exampleRelationshipConnectAction;
+		private global::Company.ReportLanguage.ReportRelationshipConnectAction reportRelationshipConnectAction;
+		private global::Company.ReportLanguage.GeneratorRelationshipConnectAction generatorRelationshipConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -261,14 +307,23 @@ namespace Company.ReportLanguage
 			if(activeView != null)
 			{
 				DslDiagrams::MouseAction action = null;
-				if (SelectedToolboxItemSupportsFilterString(activeView, global::Company.ReportLanguage.ReportLanguageToolboxHelper.ExampleRelationshipFilterString))
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::Company.ReportLanguage.ReportLanguageToolboxHelper.ReportRelationshipFilterString))
 				{
-					if (this.exampleRelationshipConnectAction == null)
+					if (this.reportRelationshipConnectAction == null)
 					{
-						this.exampleRelationshipConnectAction = new global::Company.ReportLanguage.ExampleRelationshipConnectAction(this);
-						this.exampleRelationshipConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.reportRelationshipConnectAction = new global::Company.ReportLanguage.ReportRelationshipConnectAction(this);
+						this.reportRelationshipConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.exampleRelationshipConnectAction;
+					action = this.reportRelationshipConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Company.ReportLanguage.ReportLanguageToolboxHelper.GeneratorRelationshipFilterString))
+				{
+					if (this.generatorRelationshipConnectAction == null)
+					{
+						this.generatorRelationshipConnectAction = new global::Company.ReportLanguage.GeneratorRelationshipConnectAction(this);
+						this.generatorRelationshipConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.generatorRelationshipConnectAction;
 				} 
 				else
 				{
@@ -327,10 +382,15 @@ namespace Company.ReportLanguage
 			{
 				if(disposing)
 				{
-					if(this.exampleRelationshipConnectAction != null)
+					if(this.reportRelationshipConnectAction != null)
 					{
-						this.exampleRelationshipConnectAction.Dispose();
-						this.exampleRelationshipConnectAction = null;
+						this.reportRelationshipConnectAction.Dispose();
+						this.reportRelationshipConnectAction = null;
+					}
+					if(this.generatorRelationshipConnectAction != null)
+					{
+						this.generatorRelationshipConnectAction.Dispose();
+						this.generatorRelationshipConnectAction = null;
 					}
 				}
 			}
@@ -385,8 +445,10 @@ namespace Company.ReportLanguage
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.ReportLanguage.ExampleElement), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.ReportLanguage.ExampleElementReferencesTargets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.ReportLanguage.Report), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.ReportLanguage.Generator), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.ReportLanguage.ReportReferencesReports), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.ReportLanguage.ReportReferencesGenerators), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -402,9 +464,13 @@ namespace Company.ReportLanguage
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::Company.ReportLanguage.ExampleElement)
+				if(childElement is global::Company.ReportLanguage.Report)
 				{
-					parentElement = GetParentForExampleElement((global::Company.ReportLanguage.ExampleElement)childElement);
+					parentElement = GetParentForReport((global::Company.ReportLanguage.Report)childElement);
+				} else
+				if(childElement is global::Company.ReportLanguage.Generator)
+				{
+					parentElement = GetParentForGenerator((global::Company.ReportLanguage.Generator)childElement);
 				} else
 				{
 					parentElement = null;
@@ -415,10 +481,17 @@ namespace Company.ReportLanguage
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
-			public static global::Company.ReportLanguage.ExampleModel GetParentForExampleElement( global::Company.ReportLanguage.ExampleElement root )
+			public static global::Company.ReportLanguage.ReportModel GetParentForReport( global::Company.ReportLanguage.Report root )
 			{
 				// Segments 0 and 1
-				global::Company.ReportLanguage.ExampleModel result = root.ExampleModel;
+				global::Company.ReportLanguage.ReportModel result = root.ReportModel;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Company.ReportLanguage.ReportModel GetParentForGenerator( global::Company.ReportLanguage.Generator root )
+			{
+				// Segments 0 and 1
+				global::Company.ReportLanguage.ReportModel result = root.ReportModel;
 				if ( result == null ) return null;
 				return result;
 			}
@@ -511,7 +584,8 @@ namespace Company.ReportLanguage
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.ReportLanguage.ExampleElementReferencesTargets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.ReportLanguage.ReportReferencesReports), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.ReportLanguage.ReportReferencesGenerators), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

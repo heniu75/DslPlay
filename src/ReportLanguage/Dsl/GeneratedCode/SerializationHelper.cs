@@ -309,10 +309,10 @@ namespace Company.ReportLanguage
 	{
 	
 		/// <summary>
-		/// Loads a ExampleModel instance into the default partition of the given store, and ignore serialization result.
+		/// Loads a ReportModel instance into the default partition of the given store, and ignore serialization result.
 		/// </summary>
-		/// <param name="store">The new ExampleModel instance will be created into the default partition of this store.</param>
-		/// <param name="fileName">Name of the file from which the ExampleModel instance will be deserialized.</param>
+		/// <param name="store">The new ReportModel instance will be created into the default partition of this store.</param>
+		/// <param name="fileName">Name of the file from which the ReportModel instance will be deserialized.</param>
 		/// <param name="schemaResolver">
 		/// An ISchemaResolver that allows the serializer to do schema validation on the root element (and everything inside it).
 		/// If null is passed, schema validation will not be performed.
@@ -324,8 +324,8 @@ namespace Company.ReportLanguage
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <returns>The loaded ExampleModel instance.</returns>
-		public virtual ExampleModel LoadModel(DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		/// <returns>The loaded ReportModel instance.</returns>
+		public virtual ReportModel LoadModel(DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (store == null) 
@@ -336,11 +336,11 @@ namespace Company.ReportLanguage
 		}
 		
 		/// <summary>
-		/// Loads a ExampleModel instance into the default partition of the given store.
+		/// Loads a ReportModel instance into the default partition of the given store.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the load operation.</param>
-		/// <param name="store">The new ExampleModel instance will be created into the default partition of this store.</param>
-		/// <param name="fileName">Name of the file from which the ExampleModel instance will be deserialized.</param>
+		/// <param name="store">The new ReportModel instance will be created into the default partition of this store.</param>
+		/// <param name="fileName">Name of the file from which the ReportModel instance will be deserialized.</param>
 		/// <param name="schemaResolver">
 		/// An ISchemaResolver that allows the serializer to do schema validation on the root element (and everything inside it).
 		/// If null is passed, schema validation will not be performed.
@@ -352,8 +352,8 @@ namespace Company.ReportLanguage
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <returns>The loaded ExampleModel instance.</returns>
-		public virtual ExampleModel LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		/// <returns>The loaded ReportModel instance.</returns>
+		public virtual ReportModel LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (store == null) 
@@ -364,11 +364,11 @@ namespace Company.ReportLanguage
 		}
 	
 		/// <summary>
-		/// Loads a ExampleModel instance.
+		/// Loads a ReportModel instance.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the load operation.</param>
-		/// <param name="partition">Partition in which the new ExampleModel instance will be created.</param>
-		/// <param name="fileName">Name of the file from which the ExampleModel instance will be deserialized.</param>
+		/// <param name="partition">Partition in which the new ReportModel instance will be created.</param>
+		/// <param name="fileName">Name of the file from which the ReportModel instance will be deserialized.</param>
 		/// <param name="schemaResolver">
 		/// An ISchemaResolver that allows the serializer to do schema validation on the root element (and everything inside it).
 		/// If null is passed, schema validation will not be performed.
@@ -380,9 +380,9 @@ namespace Company.ReportLanguage
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <returns>The loaded ExampleModel instance.</returns>
+		/// <returns>The loaded ReportModel instance.</returns>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability","CA1506:AvoidExcessiveClassCoupling", Justification="Generated code")]
-		public virtual ExampleModel LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Partition partition, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		public virtual ReportModel LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Partition partition, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -399,10 +399,10 @@ namespace Company.ReportLanguage
 				throw new global::System.InvalidOperationException(ReportLanguageDomainModel.SingletonResourceManager.GetString("MissingTransaction"));
 			}
 			
-			ExampleModel modelRoot = null;
+			ReportModel modelRoot = null;
 			DslModeling::DomainXmlSerializerDirectory directory = this.GetDirectory(partition.Store);
-			DslModeling::DomainClassXmlSerializer modelRootSerializer = directory.GetSerializer(ExampleModel.DomainClassId);
-			global::System.Diagnostics.Debug.Assert(modelRootSerializer != null, "Cannot find serializer for ExampleModel!");
+			DslModeling::DomainClassXmlSerializer modelRootSerializer = directory.GetSerializer(ReportModel.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(modelRootSerializer != null, "Cannot find serializer for ReportModel!");
 			if (modelRootSerializer != null)
 			{
 				using (global::System.IO.FileStream fileStream = global::System.IO.File.OpenRead(fileName))
@@ -436,7 +436,7 @@ namespace Company.ReportLanguage
 									reader.MoveToContent();
 	
 									
-									modelRoot = modelRootSerializer.TryCreateInstance(serializationContext, reader, partition) as ExampleModel;
+									modelRoot = modelRootSerializer.TryCreateInstance(serializationContext, reader, partition) as ReportModel;
 									if (modelRoot != null && !serializationResult.Failed)
 									{
 										this.ReadRootElement(serializationContext, modelRoot, reader, schemaResolver);
@@ -506,9 +506,9 @@ namespace Company.ReportLanguage
 		/// be written out.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">ExampleModel instance to be saved.</param>
-		/// <param name="fileName">Name of the file in which the ExampleModel instance will be saved.</param>
-		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, ExampleModel modelRoot, string fileName)
+		/// <param name="modelRoot">ReportModel instance to be saved.</param>
+		/// <param name="fileName">Name of the file in which the ReportModel instance will be saved.</param>
+		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, ReportModel modelRoot, string fileName)
 		{
 			this.SaveModel(serializationResult, modelRoot, fileName, global::System.Text.Encoding.UTF8, false);
 		}
@@ -517,10 +517,10 @@ namespace Company.ReportLanguage
 		/// Saves the given model to the given file, with default encoding (UTF-8).
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">ExampleModel instance to be saved.</param>
-		/// <param name="fileName">Name of the file in which the ExampleModel instance will be saved.</param>
+		/// <param name="modelRoot">ReportModel instance to be saved.</param>
+		/// <param name="fileName">Name of the file in which the ReportModel instance will be saved.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
-		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, ExampleModel modelRoot, string fileName, bool writeOptionalPropertiesWithDefaultValue)
+		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, ReportModel modelRoot, string fileName, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			this.SaveModel(serializationResult, modelRoot, fileName, global::System.Text.Encoding.UTF8, writeOptionalPropertiesWithDefaultValue);
 		}
@@ -529,12 +529,12 @@ namespace Company.ReportLanguage
 		/// Saves the given model root to the given file, with specified encoding.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">ExampleModel instance to be saved.</param>
-		/// <param name="fileName">Name of the file in which the ExampleModel instance will be saved.</param>
-		/// <param name="encoding">Encoding to use when saving the ExampleModel instance.</param>
+		/// <param name="modelRoot">ReportModel instance to be saved.</param>
+		/// <param name="fileName">Name of the file in which the ReportModel instance will be saved.</param>
+		/// <param name="encoding">Encoding to use when saving the ReportModel instance.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, ExampleModel modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, ReportModel modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -569,13 +569,13 @@ namespace Company.ReportLanguage
 		/// both can be saved without error before writing the content to disk, so we serialize the model into a in-memory stream first.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">ExampleModel instance to be saved.</param>
-		/// <param name="fileName">Name of the file in which the ExampleModel instance will be saved.</param>
-		/// <param name="encoding">Encoding to use when saving the ExampleModel instance.</param>
+		/// <param name="modelRoot">ReportModel instance to be saved.</param>
+		/// <param name="fileName">Name of the file in which the ReportModel instance will be saved.</param>
+		/// <param name="encoding">Encoding to use when saving the ReportModel instance.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
-		/// <returns>In-memory stream containing the serialized ExampleModel instance.</returns>
+		/// <returns>In-memory stream containing the serialized ReportModel instance.</returns>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-		internal global::System.IO.MemoryStream InternalSaveModel(DslModeling::SerializationResult serializationResult, ExampleModel modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+		internal global::System.IO.MemoryStream InternalSaveModel(DslModeling::SerializationResult serializationResult, ReportModel modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			#region Check Parameters
 			global::System.Diagnostics.Debug.Assert(serializationResult != null);
@@ -641,19 +641,19 @@ namespace Company.ReportLanguage
 		}
 	
 		/// <summary>
-		/// Helper method to create and initialize a new ExampleModel.
+		/// Helper method to create and initialize a new ReportModel.
 		/// </summary>
-		internal protected virtual ExampleModel CreateModelHelper(DslModeling::Partition modelPartition)
+		internal protected virtual ReportModel CreateModelHelper(DslModeling::Partition modelPartition)
 		{
-			ExampleModel model = new ExampleModel(modelPartition);
+			ReportModel model = new ReportModel(modelPartition);
 			return model;
 		}
 		
 		/// <summary>
-		/// Loads a ExampleModel instance and its associated diagram file into the default partition of the given store, and ignore serialization result.
+		/// Loads a ReportModel instance and its associated diagram file into the default partition of the given store, and ignore serialization result.
 		/// </summary>
-		/// <param name="store">The new ExampleModel instance will be created into the default partition of this store.</param>
-		/// <param name="modelFileName">Name of the file from which the ExampleModel instance will be deserialized.</param>
+		/// <param name="store">The new ReportModel instance will be created into the default partition of this store.</param>
+		/// <param name="modelFileName">Name of the file from which the ReportModel instance will be deserialized.</param>
 		/// <param name="diagramFileName">Name of the file from which the ReportLanguageDiagram instance will be deserialized.</param>
 		/// <param name="schemaResolver">
 		/// An ISchemaResolver that allows the serializer to do schema validation on the root element (and everything inside it).
@@ -666,18 +666,18 @@ namespace Company.ReportLanguage
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <returns>The loaded ExampleModel instance.</returns>
-		public virtual ExampleModel LoadModelAndDiagram(DslModeling::Store store, string modelFileName, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		/// <returns>The loaded ReportModel instance.</returns>
+		public virtual ReportModel LoadModelAndDiagram(DslModeling::Store store, string modelFileName, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			return this.LoadModelAndDiagram(new DslModeling::SerializationResult(), store, modelFileName, diagramFileName, schemaResolver, validationController, serializerLocator);
 		}
 		
 		/// <summary>
-		/// Loads a ExampleModel instance and its associated diagram file into the default partition of the given store.
+		/// Loads a ReportModel instance and its associated diagram file into the default partition of the given store.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the load operation.</param>
-		/// <param name="store">The new ExampleModel instance will be created into the default partition of this store.</param>
-		/// <param name="modelFileName">Name of the file from which the ExampleModel instance will be deserialized.</param>
+		/// <param name="store">The new ReportModel instance will be created into the default partition of this store.</param>
+		/// <param name="modelFileName">Name of the file from which the ReportModel instance will be deserialized.</param>
 		/// <param name="diagramFileName">Name of the file from which the ReportLanguageDiagram instance will be deserialized.</param>
 		/// <param name="schemaResolver">
 		/// An ISchemaResolver that allows the serializer to do schema validation on the root element (and everything inside it).
@@ -690,8 +690,8 @@ namespace Company.ReportLanguage
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <returns>The loaded ExampleModel instance.</returns>
-		public virtual ExampleModel LoadModelAndDiagram(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string modelFileName, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		/// <returns>The loaded ReportModel instance.</returns>
+		public virtual ReportModel LoadModelAndDiagram(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string modelFileName, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (store == null)
@@ -703,11 +703,11 @@ namespace Company.ReportLanguage
 		}
 			
 		/// <summary>
-		/// Loads a ExampleModel instance and its associated diagram file.
+		/// Loads a ReportModel instance and its associated diagram file.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the load operation.</param>
-		/// <param name="modelPartition">Partition in which the new ExampleModel instance will be created.</param>
-		/// <param name="modelFileName">Name of the file from which the ExampleModel instance will be deserialized.</param>
+		/// <param name="modelPartition">Partition in which the new ReportModel instance will be created.</param>
+		/// <param name="modelFileName">Name of the file from which the ReportModel instance will be deserialized.</param>
 		/// <param name="diagramPartition">Partition in which the new ReportLanguageDiagram instance will be created.</param>
 		/// <param name="diagramFileName">Name of the file from which the ReportLanguageDiagram instance will be deserialized.</param>
 		/// <param name="schemaResolver">
@@ -721,9 +721,9 @@ namespace Company.ReportLanguage
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <returns>The loaded ExampleModel instance.</returns>
+		/// <returns>The loaded ReportModel instance.</returns>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
-		public virtual ExampleModel LoadModelAndDiagram(DslModeling::SerializationResult serializationResult, DslModeling::Partition modelPartition, string modelFileName, DslModeling::Partition diagramPartition, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		public virtual ReportModel LoadModelAndDiagram(DslModeling::SerializationResult serializationResult, DslModeling::Partition modelPartition, string modelFileName, DslModeling::Partition diagramPartition, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -736,7 +736,7 @@ namespace Company.ReportLanguage
 				throw new global::System.ArgumentNullException("diagramFileName");
 			#endregion
 	
-			ExampleModel modelRoot;
+			ReportModel modelRoot;
 	
 			// Ensure there is an outer transaction spanning both model and diagram load, so moniker resolution works properly.
 			if (!diagramPartition.Store.TransactionActive)
@@ -861,11 +861,11 @@ namespace Company.ReportLanguage
 		/// be written out.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">ExampleModel instance to be saved.</param>
+		/// <param name="modelRoot">ReportModel instance to be saved.</param>
 		/// <param name="modelFileName">Name of the file in which the CanonicalSampleRoot instance will be saved.</param>
 		/// <param name="diagram">ReportLanguageDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
-		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, ExampleModel modelRoot, string modelFileName, ReportLanguageDiagram diagram, string diagramFileName)
+		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, ReportModel modelRoot, string modelFileName, ReportLanguageDiagram diagram, string diagramFileName)
 		{
 			this.SaveModelAndDiagram(serializationResult, modelRoot, modelFileName, diagram, diagramFileName, global::System.Text.Encoding.UTF8, false);
 		}
@@ -874,28 +874,28 @@ namespace Company.ReportLanguage
 		/// Saves the given diagram to the given file, with default encoding (UTF-8).
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">ExampleModel instance to be saved.</param>
+		/// <param name="modelRoot">ReportModel instance to be saved.</param>
 		/// <param name="modelFileName">Name of the file in which the CanonicalSampleRoot instance will be saved.</param>
 		/// <param name="diagram">ReportLanguageDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
-		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, ExampleModel modelRoot, string modelFileName, ReportLanguageDiagram diagram, string diagramFileName, bool writeOptionalPropertiesWithDefaultValue)
+		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, ReportModel modelRoot, string modelFileName, ReportLanguageDiagram diagram, string diagramFileName, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			this.SaveModelAndDiagram(serializationResult, modelRoot, modelFileName, diagram, diagramFileName, global::System.Text.Encoding.UTF8, writeOptionalPropertiesWithDefaultValue);
 		}
 	
 		/// <summary>
-		/// Saves the given ExampleModel and ReportLanguageDiagram to the given files, with specified encoding.
+		/// Saves the given ReportModel and ReportLanguageDiagram to the given files, with specified encoding.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">ExampleModel instance to be saved.</param>
+		/// <param name="modelRoot">ReportModel instance to be saved.</param>
 		/// <param name="modelFileName">Name of the file in which the CanonicalSampleRoot instance will be saved.</param>
 		/// <param name="diagram">ReportLanguageDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
 		/// <param name="encoding">Encoding to use when saving the diagram.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, ExampleModel modelRoot, string modelFileName, ReportLanguageDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, ReportModel modelRoot, string modelFileName, ReportLanguageDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -1267,7 +1267,7 @@ namespace Company.ReportLanguage
 		/// <param name="modelRoot">Root instance to be saved.</param>
 		/// <param name="encoding">Encoding to use when saving the root instance.</param>
 		/// <returns>Model in XML form</returns>
-		public virtual string GetSerializedModelString(global::Company.ReportLanguage.ExampleModel modelRoot, global::System.Text.Encoding encoding)
+		public virtual string GetSerializedModelString(global::Company.ReportLanguage.ReportModel modelRoot, global::System.Text.Encoding encoding)
 		{
 			string result = string.Empty;
 			if (modelRoot == null)
@@ -1470,7 +1470,7 @@ namespace Company.ReportLanguage
 namespace Company.ReportLanguage
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public partial class ExampleModel
+	public partial class ReportModel
 	{
 		/// <summary>
 		/// Check to make sure all elements in the model will have unambiguous monikers when serialized.

@@ -142,6 +142,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelExplorer.tt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="GeneratedCode\ModelExplorerToolWindow.cs">
       <AutoGen>True</AutoGen>

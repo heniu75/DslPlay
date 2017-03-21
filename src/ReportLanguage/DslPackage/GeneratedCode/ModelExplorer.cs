@@ -67,7 +67,7 @@ namespace Company.ReportLanguage
 		///</summary>
 		protected override global::System.Guid RootElementDomainClassId
 		{
-			get { return global::Company.ReportLanguage.ExampleModel.DomainClassId; }
+			get { return global::Company.ReportLanguage.ReportModel.DomainClassId; }
 		}
 		
 		/// <summary>

@@ -27,23 +27,39 @@ namespace Company.ReportLanguage
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
 	[VSShell::ProvideToolWindow(typeof(ReportLanguageExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(ReportLanguageExplorerToolWindow), Constants.ReportLanguageEditorFactoryId)]
-	[VSShell::ProvideStaticToolboxGroup("@ReportLanguageToolboxTab;Company.ReportLanguage.Dsl.dll", "Company.ReportLanguage.ReportLanguageToolboxTab")]
-	[VSShell::ProvideStaticToolboxItem("Company.ReportLanguage.ReportLanguageToolboxTab",
-					"@ExampleElementToolboxItem;Company.ReportLanguage.Dsl.dll", 
-					"Company.ReportLanguage.ExampleElementToolboxItem", 
+	[VSShell::ProvideStaticToolboxGroup("@ReportsToolboxTab;Company.ReportLanguage.Dsl.dll", "Company.ReportLanguage.ReportsToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("Company.ReportLanguage.ReportsToolboxTab",
+					"@ReportElementToolboxItem;Company.ReportLanguage.Dsl.dll", 
+					"Company.ReportLanguage.ReportElementToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"CreateExampleClassF1Keyword", 
-					"@ExampleElementToolboxBitmap;Company.ReportLanguage.Dsl.dll", 
+					"@ReportElementToolboxBitmap;Company.ReportLanguage.Dsl.dll", 
 					0xff00ff,
 					Index = 0)]
-	[VSShell::ProvideStaticToolboxItem("Company.ReportLanguage.ReportLanguageToolboxTab",
-					"@ExampleRelationshipToolboxItem;Company.ReportLanguage.Dsl.dll", 
-					"Company.ReportLanguage.ExampleRelationshipToolboxItem", 
+	[VSShell::ProvideStaticToolboxItem("Company.ReportLanguage.ReportsToolboxTab",
+					"@ReportRelationshipToolboxItem;Company.ReportLanguage.Dsl.dll", 
+					"Company.ReportLanguage.ReportRelationshipToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ConnectExampleRelationF1Keyword", 
-					"@ExampleRelationshipToolboxBitmap;Company.ReportLanguage.Dsl.dll", 
+					"@ReportRelationshipToolboxBitmap;Company.ReportLanguage.Dsl.dll", 
 					0xff00ff,
 					Index = 1)]
+	[VSShell::ProvideStaticToolboxItem("Company.ReportLanguage.ReportsToolboxTab",
+					"@GeneratorElementToolboxItem;Company.ReportLanguage.Dsl.dll", 
+					"Company.ReportLanguage.GeneratorElementToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"GeneratorElement", 
+					"@GeneratorElementToolboxBitmap;Company.ReportLanguage.Dsl.dll", 
+					0xff00ff,
+					Index = 2)]
+	[VSShell::ProvideStaticToolboxItem("Company.ReportLanguage.ReportsToolboxTab",
+					"@GeneratorRelationshipToolboxItem;Company.ReportLanguage.Dsl.dll", 
+					"Company.ReportLanguage.GeneratorRelationshipToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"GeneratorRelationship", 
+					"@GeneratorRelationshipToolboxBitmap;Company.ReportLanguage.Dsl.dll", 
+					0xff00ff,
+					Index = 3)]
 	[VSShell::ProvideEditorFactory(typeof(ReportLanguageEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(ReportLanguageEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(ReportLanguageEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

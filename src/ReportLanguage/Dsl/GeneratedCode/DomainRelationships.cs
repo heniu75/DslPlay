@@ -12,33 +12,33 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace Company.ReportLanguage
 {
 	/// <summary>
-	/// DomainRelationship ExampleModelHasElements
+	/// DomainRelationship ReportModelHasElements
 	/// Embedding relationship between the Model and Elements
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.ReportLanguage.ExampleModelHasElements.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.ReportLanguage.ExampleModelHasElements.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportModelHasElements.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.ReportLanguage.ReportModelHasElements.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.ReportLanguage.ReportLanguageDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("41b9b439-1f67-4b8c-9598-33b86ac6b5ea")]
-	public partial class ExampleModelHasElements : DslModeling::ElementLink
+	public partial class ReportModelHasElements : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ExampleModelHasElements domain class Id.
+		/// ReportModelHasElements domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x41b9b439, 0x1f67, 0x4b8c, 0x95, 0x98, 0x33, 0xb8, 0x6a, 0xc6, 0xb5, 0xea);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ExampleModelHasElements link in the same Partition as the given ExampleModel
+		/// Creates a ReportModelHasElements link in the same Partition as the given ReportModel
 		/// </summary>
-		/// <param name="source">ExampleModel to use as the source of the relationship.</param>
-		/// <param name="target">ExampleElement to use as the target of the relationship.</param>
-		public ExampleModelHasElements(ExampleModel source, ExampleElement target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ExampleModelHasElements.ExampleModelDomainRoleId, source), new DslModeling::RoleAssignment(ExampleModelHasElements.ElementDomainRoleId, target)}, null)
+		/// <param name="source">ReportModel to use as the source of the relationship.</param>
+		/// <param name="target">Report to use as the target of the relationship.</param>
+		public ReportModelHasElements(ReportModel source, Report target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ReportModelHasElements.ReportModelDomainRoleId, source), new DslModeling::RoleAssignment(ReportModelHasElements.ElementDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -47,7 +47,7 @@ namespace Company.ReportLanguage
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleModelHasElements(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ReportModelHasElements(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -58,7 +58,7 @@ namespace Company.ReportLanguage
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleModelHasElements(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ReportModelHasElements(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -68,7 +68,7 @@ namespace Company.ReportLanguage
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleModelHasElements(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ReportModelHasElements(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -79,59 +79,59 @@ namespace Company.ReportLanguage
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleModelHasElements(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ReportModelHasElements(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
 		#endregion
-		#region ExampleModel domain role code
+		#region ReportModel domain role code
 		
 		/// <summary>
-		/// ExampleModel domain role Id.
+		/// ReportModel domain role Id.
 		/// </summary>
-		public static readonly global::System.Guid ExampleModelDomainRoleId = new global::System.Guid(0xb2574a1d, 0x6fe1, 0x4fce, 0x9a, 0x59, 0xbe, 0x33, 0xf1, 0xc3, 0x4a, 0xaa);
+		public static readonly global::System.Guid ReportModelDomainRoleId = new global::System.Guid(0xb2574a1d, 0x6fe1, 0x4fce, 0x9a, 0x59, 0xbe, 0x33, 0xf1, 0xc3, 0x4a, 0xaa);
 		
 		/// <summary>
-		/// DomainRole ExampleModel
+		/// DomainRole ReportModel
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.ReportLanguage.ExampleModelHasElements/ExampleModel.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.ReportLanguage.ExampleModelHasElements/ExampleModel.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Elements", PropertyDisplayNameKey="Company.ReportLanguage.ExampleModelHasElements/ExampleModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportModelHasElements/ReportModel.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.ReportModelHasElements/ReportModel.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Elements", PropertyDisplayNameKey="Company.ReportLanguage.ReportModelHasElements/ReportModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("b2574a1d-6fe1-4fce-9a59-be33f1c34aaa")]
-		public virtual ExampleModel ExampleModel
+		public virtual ReportModel ReportModel
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return (ExampleModel)DslModeling::DomainRoleInfo.GetRolePlayer(this, ExampleModelDomainRoleId);
+				return (ReportModel)DslModeling::DomainRoleInfo.GetRolePlayer(this, ReportModelDomainRoleId);
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ExampleModelDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ReportModelDomainRoleId, value);
 			}
 		}
 				
 		#endregion
-		#region Static methods to access ExampleModel of a ExampleElement
+		#region Static methods to access ReportModel of a Report
 		/// <summary>
-		/// Gets ExampleModel.
+		/// Gets ReportModel.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ExampleModel GetExampleModel(ExampleElement element)
+		public static ReportModel GetReportModel(Report element)
 		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ElementDomainRoleId) as ExampleModel;
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ElementDomainRoleId) as ReportModel;
 		}
 		
 		/// <summary>
-		/// Sets ExampleModel.
+		/// Sets ReportModel.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetExampleModel(ExampleElement element, ExampleModel newExampleModel)
+		public static void SetReportModel(Report element, ReportModel newReportModel)
 		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, ElementDomainRoleId, newExampleModel);
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ElementDomainRoleId, newReportModel);
 		}
 		#endregion
 		#region Element domain role code
@@ -144,16 +144,16 @@ namespace Company.ReportLanguage
 		/// <summary>
 		/// DomainRole Element
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.ReportLanguage.ExampleModelHasElements/Element.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.ReportLanguage.ExampleModelHasElements/Element.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ExampleModel", PropertyDisplayNameKey="Company.ReportLanguage.ExampleModelHasElements/Element.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportModelHasElements/Element.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.ReportModelHasElements/Element.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ReportModel", PropertyDisplayNameKey="Company.ReportLanguage.ReportModelHasElements/Element.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("67df2067-166c-4bce-bf8c-74a147939869")]
-		public virtual ExampleElement Element
+		public virtual Report Element
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return (ExampleElement)DslModeling::DomainRoleInfo.GetRolePlayer(this, ElementDomainRoleId);
+				return (Report)DslModeling::DomainRoleInfo.GetRolePlayer(this, ElementDomainRoleId);
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
@@ -163,37 +163,37 @@ namespace Company.ReportLanguage
 		}
 				
 		#endregion
-		#region Static methods to access Elements of a ExampleModel
+		#region Static methods to access Elements of a ReportModel
 		/// <summary>
 		/// Gets a list of Elements.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ExampleElement> GetElements(ExampleModel element)
+		public static DslModeling::LinkedElementCollection<Report> GetElements(ReportModel element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<ExampleElement>, ExampleElement>(element, ExampleModelDomainRoleId);
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Report>, Report>(element, ReportModelDomainRoleId);
 		}
 		#endregion
-		#region ExampleModel link accessor
+		#region ReportModel link accessor
 		/// <summary>
-		/// Get the list of ExampleModelHasElements links to a ExampleModel.
+		/// Get the list of ReportModelHasElements links to a ReportModel.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ExampleModelHasElements> GetLinksToElements ( global::Company.ReportLanguage.ExampleModel exampleModelInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ReportModelHasElements> GetLinksToElements ( global::Company.ReportLanguage.ReportModel reportModelInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ExampleModelHasElements>(exampleModelInstance, global::Company.ReportLanguage.ExampleModelHasElements.ExampleModelDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportModelHasElements>(reportModelInstance, global::Company.ReportLanguage.ReportModelHasElements.ReportModelDomainRoleId);
 		}
 		#endregion
 		#region Element link accessor
 		/// <summary>
-		/// Get the ExampleModelHasElements link to a ExampleElement.
+		/// Get the ReportModelHasElements link to a Report.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.ReportLanguage.ExampleModelHasElements GetLinkToExampleModel (global::Company.ReportLanguage.ExampleElement elementInstance)
+		public static global::Company.ReportLanguage.ReportModelHasElements GetLinkToReportModel (global::Company.ReportLanguage.Report elementInstance)
 		{
-			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ExampleModelHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ExampleModelHasElements>(elementInstance, global::Company.ReportLanguage.ExampleModelHasElements.ElementDomainRoleId);
+			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ReportModelHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportModelHasElements>(elementInstance, global::Company.ReportLanguage.ReportModelHasElements.ElementDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Element not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -205,18 +205,18 @@ namespace Company.ReportLanguage
 			}
 		}
 		#endregion
-		#region ExampleModelHasElements instance accessors
+		#region ReportModelHasElements instance accessors
 		
 		/// <summary>
-		/// Get any ExampleModelHasElements links between a given ExampleModel and a ExampleElement.
+		/// Get any ReportModelHasElements links between a given ReportModel and a Report.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ExampleModelHasElements> GetLinks( global::Company.ReportLanguage.ExampleModel source, global::Company.ReportLanguage.ExampleElement target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ReportModelHasElements> GetLinks( global::Company.ReportLanguage.ReportModel source, global::Company.ReportLanguage.Report target )
 		{
-			global::System.Collections.Generic.List<global::Company.ReportLanguage.ExampleModelHasElements> outLinks = new global::System.Collections.Generic.List<global::Company.ReportLanguage.ExampleModelHasElements>();
-			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ExampleModelHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ExampleModelHasElements>(source, global::Company.ReportLanguage.ExampleModelHasElements.ExampleModelDomainRoleId);
-			foreach ( global::Company.ReportLanguage.ExampleModelHasElements link in links )
+			global::System.Collections.Generic.List<global::Company.ReportLanguage.ReportModelHasElements> outLinks = new global::System.Collections.Generic.List<global::Company.ReportLanguage.ReportModelHasElements>();
+			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ReportModelHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportModelHasElements>(source, global::Company.ReportLanguage.ReportModelHasElements.ReportModelDomainRoleId);
+			foreach ( global::Company.ReportLanguage.ReportModelHasElements link in links )
 			{
 				if ( target.Equals(link.Element) )
 				{
@@ -226,14 +226,14 @@ namespace Company.ReportLanguage
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ExampleModelHasElements link between a given ExampleModeland a ExampleElement.
+		/// Get the one ReportModelHasElements link between a given ReportModeland a Report.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.ReportLanguage.ExampleModelHasElements GetLink( global::Company.ReportLanguage.ExampleModel source, global::Company.ReportLanguage.ExampleElement target )
+		public static global::Company.ReportLanguage.ReportModelHasElements GetLink( global::Company.ReportLanguage.ReportModel source, global::Company.ReportLanguage.Report target )
 		{
-			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ExampleModelHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ExampleModelHasElements>(source, global::Company.ReportLanguage.ExampleModelHasElements.ExampleModelDomainRoleId);
-			foreach ( global::Company.ReportLanguage.ExampleModelHasElements link in links )
+			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ReportModelHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportModelHasElements>(source, global::Company.ReportLanguage.ReportModelHasElements.ReportModelDomainRoleId);
+			foreach ( global::Company.ReportLanguage.ReportModelHasElements link in links )
 			{
 				if ( target.Equals(link.Element) )
 				{
@@ -249,33 +249,33 @@ namespace Company.ReportLanguage
 namespace Company.ReportLanguage
 {
 	/// <summary>
-	/// DomainRelationship ExampleElementReferencesTargets
+	/// DomainRelationship ReportReferencesReports
 	/// Reference relationship between Elements.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.ReportLanguage.ExampleElementReferencesTargets.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.ReportLanguage.ExampleElementReferencesTargets.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportReferencesReports.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.ReportLanguage.ReportReferencesReports.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.ReportLanguage.ReportLanguageDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
 	[DslModeling::DomainObjectId("14fe1330-6ca0-4a7d-8f66-83abc8e1dc9e")]
-	public partial class ExampleElementReferencesTargets : DslModeling::ElementLink
+	public partial class ReportReferencesReports : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ExampleElementReferencesTargets domain class Id.
+		/// ReportReferencesReports domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x14fe1330, 0x6ca0, 0x4a7d, 0x8f, 0x66, 0x83, 0xab, 0xc8, 0xe1, 0xdc, 0x9e);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ExampleElementReferencesTargets link in the same Partition as the given ExampleElement
+		/// Creates a ReportReferencesReports link in the same Partition as the given Report
 		/// </summary>
-		/// <param name="source">ExampleElement to use as the source of the relationship.</param>
-		/// <param name="target">ExampleElement to use as the target of the relationship.</param>
-		public ExampleElementReferencesTargets(ExampleElement source, ExampleElement target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ExampleElementReferencesTargets.SourceDomainRoleId, source), new DslModeling::RoleAssignment(ExampleElementReferencesTargets.TargetDomainRoleId, target)}, null)
+		/// <param name="source">Report to use as the source of the relationship.</param>
+		/// <param name="target">Report to use as the target of the relationship.</param>
+		public ReportReferencesReports(Report source, Report target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ReportReferencesReports.SourceDomainRoleId, source), new DslModeling::RoleAssignment(ReportReferencesReports.TargetDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -284,7 +284,7 @@ namespace Company.ReportLanguage
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleElementReferencesTargets(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ReportReferencesReports(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -295,7 +295,7 @@ namespace Company.ReportLanguage
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleElementReferencesTargets(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ReportReferencesReports(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -305,7 +305,7 @@ namespace Company.ReportLanguage
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleElementReferencesTargets(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ReportReferencesReports(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -316,7 +316,7 @@ namespace Company.ReportLanguage
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleElementReferencesTargets(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ReportReferencesReports(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -332,16 +332,16 @@ namespace Company.ReportLanguage
 		/// DomainRole Source
 		/// Description for Company.ReportLanguage.ExampleRelationship.Target
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.ReportLanguage.ExampleElementReferencesTargets/Source.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.ReportLanguage.ExampleElementReferencesTargets/Source.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Targets", PropertyDisplayNameKey="Company.ReportLanguage.ExampleElementReferencesTargets/Source.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportReferencesReports/Source.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.ReportReferencesReports/Source.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Targets", PropertyDisplayNameKey="Company.ReportLanguage.ReportReferencesReports/Source.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("d2ac6cc4-3d35-446b-9141-4bb9a57e85f3")]
-		public virtual ExampleElement Source
+		public virtual Report Source
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return (ExampleElement)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceDomainRoleId);
+				return (Report)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceDomainRoleId);
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
@@ -351,15 +351,15 @@ namespace Company.ReportLanguage
 		}
 				
 		#endregion
-		#region Static methods to access Sources of a ExampleElement
+		#region Static methods to access Sources of a Report
 		/// <summary>
 		/// Gets a list of Sources.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ExampleElement> GetSources(ExampleElement element)
+		public static DslModeling::LinkedElementCollection<Report> GetSources(Report element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<ExampleElement>, ExampleElement>(element, TargetDomainRoleId);
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Report>, Report>(element, TargetDomainRoleId);
 		}
 		#endregion
 		#region Target domain role code
@@ -373,16 +373,16 @@ namespace Company.ReportLanguage
 		/// DomainRole Target
 		/// Description for Company.ReportLanguage.ExampleRelationship.Source
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.ReportLanguage.ExampleElementReferencesTargets/Target.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.ReportLanguage.ExampleElementReferencesTargets/Target.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Sources", PropertyDisplayNameKey="Company.ReportLanguage.ExampleElementReferencesTargets/Target.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportReferencesReports/Target.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.ReportReferencesReports/Target.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Sources", PropertyDisplayNameKey="Company.ReportLanguage.ReportReferencesReports/Target.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("f928e7c0-122c-492e-b58d-377de6c0e9e2")]
-		public virtual ExampleElement Target
+		public virtual Report Target
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return (ExampleElement)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetDomainRoleId);
+				return (Report)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetDomainRoleId);
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
@@ -392,51 +392,51 @@ namespace Company.ReportLanguage
 		}
 				
 		#endregion
-		#region Static methods to access Targets of a ExampleElement
+		#region Static methods to access Targets of a Report
 		/// <summary>
 		/// Gets a list of Targets.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ExampleElement> GetTargets(ExampleElement element)
+		public static DslModeling::LinkedElementCollection<Report> GetTargets(Report element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<ExampleElement>, ExampleElement>(element, SourceDomainRoleId);
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Report>, Report>(element, SourceDomainRoleId);
 		}
 		#endregion
 		#region Source link accessor
 		/// <summary>
-		/// Get the list of ExampleElementReferencesTargets links to a ExampleElement.
+		/// Get the list of ReportReferencesReports links to a Report.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ExampleElementReferencesTargets> GetLinksToTargets ( global::Company.ReportLanguage.ExampleElement sourceInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ReportReferencesReports> GetLinksToTargets ( global::Company.ReportLanguage.Report sourceInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ExampleElementReferencesTargets>(sourceInstance, global::Company.ReportLanguage.ExampleElementReferencesTargets.SourceDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportReferencesReports>(sourceInstance, global::Company.ReportLanguage.ReportReferencesReports.SourceDomainRoleId);
 		}
 		#endregion
 		#region Target link accessor
 		/// <summary>
-		/// Get the list of ExampleElementReferencesTargets links to a ExampleElement.
+		/// Get the list of ReportReferencesReports links to a Report.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ExampleElementReferencesTargets> GetLinksToSources ( global::Company.ReportLanguage.ExampleElement targetInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ReportReferencesReports> GetLinksToSources ( global::Company.ReportLanguage.Report targetInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ExampleElementReferencesTargets>(targetInstance, global::Company.ReportLanguage.ExampleElementReferencesTargets.TargetDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportReferencesReports>(targetInstance, global::Company.ReportLanguage.ReportReferencesReports.TargetDomainRoleId);
 		}
 		#endregion
-		#region ExampleElementReferencesTargets instance accessors
+		#region ReportReferencesReports instance accessors
 		
 		/// <summary>
-		/// Get any ExampleElementReferencesTargets links between a given ExampleElement and a ExampleElement.
+		/// Get any ReportReferencesReports links between a given Report and a Report.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ExampleElementReferencesTargets> GetLinks( global::Company.ReportLanguage.ExampleElement source, global::Company.ReportLanguage.ExampleElement target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ReportReferencesReports> GetLinks( global::Company.ReportLanguage.Report source, global::Company.ReportLanguage.Report target )
 		{
-			global::System.Collections.Generic.List<global::Company.ReportLanguage.ExampleElementReferencesTargets> outLinks = new global::System.Collections.Generic.List<global::Company.ReportLanguage.ExampleElementReferencesTargets>();
-			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ExampleElementReferencesTargets> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ExampleElementReferencesTargets>(source, global::Company.ReportLanguage.ExampleElementReferencesTargets.SourceDomainRoleId);
-			foreach ( global::Company.ReportLanguage.ExampleElementReferencesTargets link in links )
+			global::System.Collections.Generic.List<global::Company.ReportLanguage.ReportReferencesReports> outLinks = new global::System.Collections.Generic.List<global::Company.ReportLanguage.ReportReferencesReports>();
+			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ReportReferencesReports> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportReferencesReports>(source, global::Company.ReportLanguage.ReportReferencesReports.SourceDomainRoleId);
+			foreach ( global::Company.ReportLanguage.ReportReferencesReports link in links )
 			{
 				if ( target.Equals(link.Target) )
 				{
@@ -446,16 +446,475 @@ namespace Company.ReportLanguage
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ExampleElementReferencesTargets link between a given ExampleElementand a ExampleElement.
+		/// Get the one ReportReferencesReports link between a given Reportand a Report.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.ReportLanguage.ExampleElementReferencesTargets GetLink( global::Company.ReportLanguage.ExampleElement source, global::Company.ReportLanguage.ExampleElement target )
+		public static global::Company.ReportLanguage.ReportReferencesReports GetLink( global::Company.ReportLanguage.Report source, global::Company.ReportLanguage.Report target )
 		{
-			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ExampleElementReferencesTargets> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ExampleElementReferencesTargets>(source, global::Company.ReportLanguage.ExampleElementReferencesTargets.SourceDomainRoleId);
-			foreach ( global::Company.ReportLanguage.ExampleElementReferencesTargets link in links )
+			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ReportReferencesReports> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportReferencesReports>(source, global::Company.ReportLanguage.ReportReferencesReports.SourceDomainRoleId);
+			foreach ( global::Company.ReportLanguage.ReportReferencesReports link in links )
 			{
 				if ( target.Equals(link.Target) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Company.ReportLanguage
+{
+	/// <summary>
+	/// DomainRelationship ReportModelHasGenerators
+	/// Description for Company.ReportLanguage.ReportModelHasGenerators
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportModelHasGenerators.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.ReportLanguage.ReportModelHasGenerators.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.ReportLanguage.ReportLanguageDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("27aa1f02-2f45-4b8d-9094-85a4c1ccd8ac")]
+	public partial class ReportModelHasGenerators : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ReportModelHasGenerators domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x27aa1f02, 0x2f45, 0x4b8d, 0x90, 0x94, 0x85, 0xa4, 0xc1, 0xcc, 0xd8, 0xac);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ReportModelHasGenerators link in the same Partition as the given ReportModel
+		/// </summary>
+		/// <param name="source">ReportModel to use as the source of the relationship.</param>
+		/// <param name="target">Generator to use as the target of the relationship.</param>
+		public ReportModelHasGenerators(ReportModel source, Generator target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ReportModelHasGenerators.ReportModelDomainRoleId, source), new DslModeling::RoleAssignment(ReportModelHasGenerators.GeneratorDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ReportModelHasGenerators(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ReportModelHasGenerators(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ReportModelHasGenerators(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ReportModelHasGenerators(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ReportModel domain role code
+		
+		/// <summary>
+		/// ReportModel domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ReportModelDomainRoleId = new global::System.Guid(0x0fd2cdae, 0x38c0, 0x4dd4, 0x93, 0x9c, 0x53, 0x22, 0x9d, 0x7b, 0x92, 0xeb);
+		
+		/// <summary>
+		/// DomainRole ReportModel
+		/// Description for Company.ReportLanguage.ReportModelHasGenerators.ReportModel
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportModelHasGenerators/ReportModel.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.ReportModelHasGenerators/ReportModel.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Generators", PropertyDisplayNameKey="Company.ReportLanguage.ReportModelHasGenerators/ReportModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("0fd2cdae-38c0-4dd4-939c-53229d7b92eb")]
+		public virtual ReportModel ReportModel
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ReportModel)DslModeling::DomainRoleInfo.GetRolePlayer(this, ReportModelDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ReportModelDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ReportModel of a Generator
+		/// <summary>
+		/// Gets ReportModel.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ReportModel GetReportModel(Generator element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, GeneratorDomainRoleId) as ReportModel;
+		}
+		
+		/// <summary>
+		/// Sets ReportModel.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetReportModel(Generator element, ReportModel newReportModel)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, GeneratorDomainRoleId, newReportModel);
+		}
+		#endregion
+		#region Generator domain role code
+		
+		/// <summary>
+		/// Generator domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid GeneratorDomainRoleId = new global::System.Guid(0x84d1bdc6, 0x8448, 0x472f, 0xa8, 0x13, 0xc3, 0x13, 0x9d, 0x1b, 0x59, 0xc0);
+		
+		/// <summary>
+		/// DomainRole Generator
+		/// Description for Company.ReportLanguage.ReportModelHasGenerators.Generator
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportModelHasGenerators/Generator.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.ReportModelHasGenerators/Generator.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ReportModel", PropertyDisplayNameKey="Company.ReportLanguage.ReportModelHasGenerators/Generator.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("84d1bdc6-8448-472f-a813-c3139d1b59c0")]
+		public virtual Generator Generator
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Generator)DslModeling::DomainRoleInfo.GetRolePlayer(this, GeneratorDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, GeneratorDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Generators of a ReportModel
+		/// <summary>
+		/// Gets a list of Generators.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Generator> GetGenerators(ReportModel element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Generator>, Generator>(element, ReportModelDomainRoleId);
+		}
+		#endregion
+		#region ReportModel link accessor
+		/// <summary>
+		/// Get the list of ReportModelHasGenerators links to a ReportModel.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ReportModelHasGenerators> GetLinksToGenerators ( global::Company.ReportLanguage.ReportModel reportModelInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportModelHasGenerators>(reportModelInstance, global::Company.ReportLanguage.ReportModelHasGenerators.ReportModelDomainRoleId);
+		}
+		#endregion
+		#region Generator link accessor
+		/// <summary>
+		/// Get the ReportModelHasGenerators link to a Generator.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.ReportLanguage.ReportModelHasGenerators GetLinkToReportModel (global::Company.ReportLanguage.Generator generatorInstance)
+		{
+			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ReportModelHasGenerators> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportModelHasGenerators>(generatorInstance, global::Company.ReportLanguage.ReportModelHasGenerators.GeneratorDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Generator not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ReportModelHasGenerators instance accessors
+		
+		/// <summary>
+		/// Get any ReportModelHasGenerators links between a given ReportModel and a Generator.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ReportModelHasGenerators> GetLinks( global::Company.ReportLanguage.ReportModel source, global::Company.ReportLanguage.Generator target )
+		{
+			global::System.Collections.Generic.List<global::Company.ReportLanguage.ReportModelHasGenerators> outLinks = new global::System.Collections.Generic.List<global::Company.ReportLanguage.ReportModelHasGenerators>();
+			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ReportModelHasGenerators> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportModelHasGenerators>(source, global::Company.ReportLanguage.ReportModelHasGenerators.ReportModelDomainRoleId);
+			foreach ( global::Company.ReportLanguage.ReportModelHasGenerators link in links )
+			{
+				if ( target.Equals(link.Generator) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ReportModelHasGenerators link between a given ReportModeland a Generator.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.ReportLanguage.ReportModelHasGenerators GetLink( global::Company.ReportLanguage.ReportModel source, global::Company.ReportLanguage.Generator target )
+		{
+			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ReportModelHasGenerators> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportModelHasGenerators>(source, global::Company.ReportLanguage.ReportModelHasGenerators.ReportModelDomainRoleId);
+			foreach ( global::Company.ReportLanguage.ReportModelHasGenerators link in links )
+			{
+				if ( target.Equals(link.Generator) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Company.ReportLanguage
+{
+	/// <summary>
+	/// DomainRelationship ReportReferencesGenerators
+	/// Description for Company.ReportLanguage.ReportReferencesGenerators
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportReferencesGenerators.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.ReportLanguage.ReportReferencesGenerators.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.ReportLanguage.ReportLanguageDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("5ef0c1c0-c67b-4615-abd2-c2842d760f12")]
+	public partial class ReportReferencesGenerators : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ReportReferencesGenerators domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x5ef0c1c0, 0xc67b, 0x4615, 0xab, 0xd2, 0xc2, 0x84, 0x2d, 0x76, 0x0f, 0x12);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ReportReferencesGenerators link in the same Partition as the given Report
+		/// </summary>
+		/// <param name="source">Report to use as the source of the relationship.</param>
+		/// <param name="target">Generator to use as the target of the relationship.</param>
+		public ReportReferencesGenerators(Report source, Generator target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ReportReferencesGenerators.ReportDomainRoleId, source), new DslModeling::RoleAssignment(ReportReferencesGenerators.GeneratorDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ReportReferencesGenerators(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ReportReferencesGenerators(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ReportReferencesGenerators(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ReportReferencesGenerators(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Report domain role code
+		
+		/// <summary>
+		/// Report domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ReportDomainRoleId = new global::System.Guid(0xdc1dd15e, 0x7dac, 0x44fd, 0x9f, 0xd7, 0xa5, 0x76, 0xbf, 0x7b, 0x10, 0xde);
+		
+		/// <summary>
+		/// DomainRole Report
+		/// Description for Company.ReportLanguage.ReportReferencesGenerators.Report
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportReferencesGenerators/Report.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.ReportReferencesGenerators/Report.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Generators", PropertyDisplayNameKey="Company.ReportLanguage.ReportReferencesGenerators/Report.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("dc1dd15e-7dac-44fd-9fd7-a576bf7b10de")]
+		public virtual Report Report
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Report)DslModeling::DomainRoleInfo.GetRolePlayer(this, ReportDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ReportDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Reported of a Generator
+		/// <summary>
+		/// Gets a list of Reported.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Report> GetReported(Generator element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Report>, Report>(element, GeneratorDomainRoleId);
+		}
+		#endregion
+		#region Generator domain role code
+		
+		/// <summary>
+		/// Generator domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid GeneratorDomainRoleId = new global::System.Guid(0x9b2adef3, 0x8de2, 0x4693, 0xa6, 0xd1, 0xdf, 0x1b, 0xa5, 0xa8, 0x6a, 0xb5);
+		
+		/// <summary>
+		/// DomainRole Generator
+		/// Description for Company.ReportLanguage.ReportReferencesGenerators.Generator
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportReferencesGenerators/Generator.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.ReportLanguage.ReportReferencesGenerators/Generator.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Reported", PropertyDisplayNameKey="Company.ReportLanguage.ReportReferencesGenerators/Generator.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("9b2adef3-8de2-4693-a6d1-df1ba5a86ab5")]
+		public virtual Generator Generator
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Generator)DslModeling::DomainRoleInfo.GetRolePlayer(this, GeneratorDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, GeneratorDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Generators of a Report
+		/// <summary>
+		/// Gets a list of Generators.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Generator> GetGenerators(Report element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Generator>, Generator>(element, ReportDomainRoleId);
+		}
+		#endregion
+		#region Report link accessor
+		/// <summary>
+		/// Get the list of ReportReferencesGenerators links to a Report.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ReportReferencesGenerators> GetLinksToGenerators ( global::Company.ReportLanguage.Report reportInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportReferencesGenerators>(reportInstance, global::Company.ReportLanguage.ReportReferencesGenerators.ReportDomainRoleId);
+		}
+		#endregion
+		#region Generator link accessor
+		/// <summary>
+		/// Get the list of ReportReferencesGenerators links to a Generator.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ReportReferencesGenerators> GetLinksToReported ( global::Company.ReportLanguage.Generator generatorInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportReferencesGenerators>(generatorInstance, global::Company.ReportLanguage.ReportReferencesGenerators.GeneratorDomainRoleId);
+		}
+		#endregion
+		#region ReportReferencesGenerators instance accessors
+		
+		/// <summary>
+		/// Get any ReportReferencesGenerators links between a given Report and a Generator.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.ReportLanguage.ReportReferencesGenerators> GetLinks( global::Company.ReportLanguage.Report source, global::Company.ReportLanguage.Generator target )
+		{
+			global::System.Collections.Generic.List<global::Company.ReportLanguage.ReportReferencesGenerators> outLinks = new global::System.Collections.Generic.List<global::Company.ReportLanguage.ReportReferencesGenerators>();
+			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ReportReferencesGenerators> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportReferencesGenerators>(source, global::Company.ReportLanguage.ReportReferencesGenerators.ReportDomainRoleId);
+			foreach ( global::Company.ReportLanguage.ReportReferencesGenerators link in links )
+			{
+				if ( target.Equals(link.Generator) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ReportReferencesGenerators link between a given Reportand a Generator.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.ReportLanguage.ReportReferencesGenerators GetLink( global::Company.ReportLanguage.Report source, global::Company.ReportLanguage.Generator target )
+		{
+			global::System.Collections.Generic.IList<global::Company.ReportLanguage.ReportReferencesGenerators> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.ReportLanguage.ReportReferencesGenerators>(source, global::Company.ReportLanguage.ReportReferencesGenerators.ReportDomainRoleId);
+			foreach ( global::Company.ReportLanguage.ReportReferencesGenerators link in links )
+			{
+				if ( target.Equals(link.Generator) )
 				{
 					return link;
 				}

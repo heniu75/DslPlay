@@ -48,9 +48,13 @@ namespace Company.ReportLanguage
 		/// </remarks>
 		public const string ToolboxFilterString = "ReportLanguage.1.0";
 		/// <summary>
-		/// Toolbox item filter string used to identify ExampleRelationship connector tool.
+		/// Toolbox item filter string used to identify ReportRelationship connector tool.
 		/// </summary>
-		public const string ExampleRelationshipFilterString = "ExampleRelationship.1.0";
+		public const string ReportRelationshipFilterString = "ReportRelationship.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify GeneratorRelationship connector tool.
+		/// </summary>
+		public const string GeneratorRelationshipFilterString = "GeneratorRelationship.1.0";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();
@@ -86,7 +90,7 @@ namespace Company.ReportLanguage
 		{
 			get
 			{
-				return global::Company.ReportLanguage.ReportLanguageDomainModel.SingletonResourceManager.GetString("ReportLanguageToolboxTab", global::System.Globalization.CultureInfo.CurrentUICulture);
+				return global::Company.ReportLanguage.ReportLanguageDomainModel.SingletonResourceManager.GetString("ReportsToolboxTab", global::System.Globalization.CultureInfo.CurrentUICulture);
 			}
 		}
 		
@@ -98,7 +102,7 @@ namespace Company.ReportLanguage
 		{
 			get
 			{
-				return 2;
+				return 4;
 			}
 		}
 		
@@ -147,38 +151,72 @@ namespace Company.ReportLanguage
 			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
 			switch(itemId)
 			{
-				case "Company.ReportLanguage.ExampleElementToolboxItem":
-					// Add ExampleElement shape tool.
+				case "Company.ReportLanguage.ReportElementToolboxItem":
+					// Add ReportElement shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Company.ReportLanguage.ExampleElementToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"Company.ReportLanguage.ReportElementToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						1, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("ExampleElementToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ExampleElementToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Company.ReportLanguage.ReportLanguageToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("ReportLanguageToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						resourceManager.GetString("ReportElementToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ReportElementToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Company.ReportLanguage.ReportsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("ReportsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"CreateExampleClassF1Keyword", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("ExampleElementToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Company.ReportLanguage.ExampleElement.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						resourceManager.GetString("ReportElementToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.ReportLanguage.Report.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "Company.ReportLanguage.ExampleRelationshipToolboxItem":
+				case "Company.ReportLanguage.ReportRelationshipToolboxItem":
 
-					// Add ExampleRelationship connector tool.
+					// Add ReportRelationship connector tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Company.ReportLanguage.ExampleRelationshipToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"Company.ReportLanguage.ReportRelationshipToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						2, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("ExampleRelationshipToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ExampleRelationshipToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"Company.ReportLanguage.ReportLanguageToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("ReportLanguageToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						resourceManager.GetString("ReportRelationshipToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ReportRelationshipToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Company.ReportLanguage.ReportsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("ReportsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"ConnectExampleRelationF1Keyword", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("ExampleRelationshipToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						resourceManager.GetString("ReportRelationshipToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						null, // Connector toolbox items do not have an underlying data object.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ExampleRelationshipFilterString)
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ReportRelationshipFilterString)
+						});
+					break;
+				case "Company.ReportLanguage.GeneratorElementToolboxItem":
+					// Add GeneratorElement shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.ReportLanguage.GeneratorElementToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						3, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("GeneratorElementToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("GeneratorElementToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Company.ReportLanguage.ReportsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("ReportsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"GeneratorElement", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("GeneratorElementToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.ReportLanguage.Generator.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Company.ReportLanguage.GeneratorRelationshipToolboxItem":
+
+					// Add GeneratorRelationship connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.ReportLanguage.GeneratorRelationshipToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						4, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("GeneratorRelationshipToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("GeneratorRelationshipToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Company.ReportLanguage.ReportsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("ReportsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"GeneratorRelationship", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("GeneratorRelationshipToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(GeneratorRelationshipFilterString)
 						});
 					break;
 				default:

@@ -14,16 +14,16 @@ using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 namespace Company.ReportLanguage
 {
 	/// <summary>
-	/// DomainClass ExampleConnector
-	/// Connector between the ExampleShapes. Represents ExampleRelationships on the
-	/// Diagram.
+	/// DomainClass ReportToReportConnector
+	/// Connector between Reports. Represents Report-References-Report relationship on
+	/// the Diagram.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.ReportLanguage.ExampleConnector.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.ReportLanguage.ExampleConnector.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportToReportConnector.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.ReportLanguage.ReportToReportConnector.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.ReportLanguage.ReportLanguageDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("52d90805-d15b-4ab1-a26c-ec4a1dab92dd")]
-	public partial class ExampleConnector : DslDiagrams::BinaryLinkShape
+	public partial class ReportToReportConnector : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -88,9 +88,9 @@ namespace Company.ReportLanguage
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with ExampleConnector.
+		/// Finds a decorator associated with ReportToReportConnector.
 		/// </summary>
-		public static DslDiagrams::Decorator FindExampleConnectorDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindReportToReportConnectorDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -133,7 +133,7 @@ namespace Company.ReportLanguage
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ExampleConnector domain class Id.
+		/// ReportToReportConnector domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x52d90805, 0xd15b, 0x4ab1, 0xa2, 0x6c, 0xec, 0x4a, 0x1d, 0xab, 0x92, 0xdd);
 		/// <summary>
@@ -141,7 +141,7 @@ namespace Company.ReportLanguage
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ExampleConnector(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ReportToReportConnector(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -151,7 +151,124 @@ namespace Company.ReportLanguage
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ExampleConnector(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ReportToReportConnector(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Company.ReportLanguage
+{
+	/// <summary>
+	/// DomainClass ReportToGeneratorConnector
+	/// Description for Company.ReportLanguage.ReportToGeneratorConnector
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.ReportLanguage.ReportToGeneratorConnector.DisplayName", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.ReportLanguage.ReportToGeneratorConnector.Description", typeof(global::Company.ReportLanguage.ReportLanguageDomainModel), "Company.ReportLanguage.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.ReportLanguage.ReportLanguageDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("b156b169-e4ab-4702-9a58-5ec26eb95b51")]
+	public partial class ReportToGeneratorConnector : DslDiagrams::BinaryLinkShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with ReportToGeneratorConnector.
+		/// </summary>
+		public static DslDiagrams::Decorator FindReportToGeneratorConnectorDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		#endregion
+		
+		#region Connector styles
+		#endregion
+		
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ReportToGeneratorConnector domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb156b169, 0xe4ab, 0x4702, 0x9a, 0x58, 0x5e, 0xc2, 0x6e, 0xb9, 0x5b, 0x51);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ReportToGeneratorConnector(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ReportToGeneratorConnector(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
